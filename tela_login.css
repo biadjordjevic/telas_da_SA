@@ -1,79 +1,92 @@
+
 body{
     text-align: center;
     align-items: center;
     background-color: #1f2326;
-    background-image: url(farsa.png);
-    background-repeat: no-repeat;
-    background-position: right center;
-    
+    margin: 0%;
 }
 
 
 header{
- background-color: hsl(0, 61%, 25%);
-width: 400%;
- margin:auto;
+    background-color: hsl(0, 61%, 25%);
+    padding: 13px;
+    margin:auto;
 }
 
 .box{
-    
     border-radius: 5%;
     background-color: #8d95a693;
     align-content: center;
     align-items: center;
     margin: auto;
-    border: solid #960000;
-    width: 30%;
+    width: 35%;
     height: 30%;
     margin-top: 10%;
 }
 
 head{
     align-content: center;
-   text-align: center;
-}
-
-p{   
-    border: solid hsl(0, 100%, 29%);   
+    text-align: center;
 }
 
 a{
-    color: #002EFF;
-    border: solid hsl(0, 100%, 29%);
+    color: #002EFF; 
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    margin-bottom:20px;
 }
 
-.dados{
-    input{
-        display: flex;
-        flex-direction: column;
-        background-color: #8d95a693;
-        color: rgb(191, 189, 188);
-        border-width: 20%;
-        border: solid red;
+.dados input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid rgb(191, 189, 188);
         margin: auto;
         margin-bottom: 20px;
-        font-family: 'Helvetica';   
-    } 
-    input::placeholder{
-        color: rgb(191, 189, 188);
-       
-    } 
+        font-family: "Open Sans", sans-serif;
+        height: 40px;
+        width: 400px;   
+        font-size: 20px;    
+   
+}
+.dados input::placeholder{
+color: rgb(191, 189, 188);
 }
 
 .button{
     width: 250px;
-    height: 40px;
-    font-size: 16px; 
+    height: 45px;
+    font-size: 20px; 
     padding: 10px; 
     background-color: #D9D9D9;
     color: #000000; 
     border: none;
     border-radius: 20px;
- 
+    font-family: "Open Sans", sans-serif;
+
 }
 
-.login{
+h1{
     color: hsl(0, 0%, 100%);
+    font-size: 45px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
   
 }
+img{
+    z-index: -1;
+    position: absolute;
+    top: 140px;
+    left: 1100px;
+    height: 80%;
+    width: auto;
+}
+.termos_priv{
+    margin-bottom: 1px;
+    margin-top: 15px;
+    text-align: left;
+}
 
+
+.input-left{
+    margin-left: 17%;
+}
