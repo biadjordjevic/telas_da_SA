@@ -6,11 +6,20 @@ body{
     margin: 0%;
 }
 
-
 header{
-    background-color: hsl(0, 61%, 25%);
+    background-color:  hsl(0, 61%, 25%);
     padding: 13px;
     margin:auto;
+    border: solid red;
+}
+
+.flex{
+    border: solid red;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1%;
+    margin-top: 1%;
+
 }
 
 .box{
@@ -46,6 +55,7 @@ a{
         height: 40px;
         width: 400px;   
         font-size: 20px;    
+        color:rgb(51, 51, 51)
    
 }
 .dados input::placeholder{
@@ -90,3 +100,25 @@ img{
 .input-left{
     margin-left: 17%;
 }
+
+  .search-container button:hover {
+    background: #ccc;
+  }
+  .search-container button {
+    
+    padding: 10px 15px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    
+  }
+  .search-container {
+    height: 5%;
+    border: solid red;
+   
+    
+    
+  }

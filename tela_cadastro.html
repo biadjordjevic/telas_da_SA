@@ -10,10 +10,21 @@
 </head>
 <body>
  
-    <header>
-<p>b</p>
 
-    </header>
+        <header>
+            <div class="flex"
+        <p><a href="tela_inicio.html" class="cabeça">início</a></p>
+        <p> <a href="tela_inicio.html" class="cabeça"> farsa da boa preguiça</a></p>
+        <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        </header>
+          
+    
+</div>
     <img src="logobg.png" alt="logo">
     <!-- adicionar o menu -->
     <div class="box">
@@ -24,10 +35,10 @@
 <div class="dados">
     
 <!-- ajustar a posição os dados tanto nessa página quanto na outra -->
-    <input type="text" class="type_text" id="nome" placeholder="Nome de usuario">
-    <input type="email" id="email" class="type_text" placeholder="Email">
-    <input id="senha" class="type_text" type="password" placeholder="Senha" >
-    <input type="password" id="senha2" class="type_text" placeholder="Confirmação da senha">
+    <input type="text" class="type_text" id="user_cad" placeholder="Nome de usuario">
+    <input type="email" id="email_cad" class="type_text" placeholder="Email">
+    <input id="senha_cad" class="type_text" type="password" placeholder="Senha" >
+    <input type="password" id="senha_confirm_cad" class="type_text" placeholder="Confirmação da senha">
 
 </div>
 
@@ -38,7 +49,7 @@
 </div>
 
 
-<button id="button" class='button' onclick="Enviar()">Cadastrar</button>
+<button id="button" class='button' onclick="Cadastro()">Cadastrar</button>
 
 
 <p class="login">Já tem uma conta? <a href="tela_login.html">Login</a> </p>
