@@ -122,3 +122,31 @@ img{
     
     
   }
+
+  ul li{
+    display: inline-block;
+    margin-top: 15px
+    }
+    
+    
+    .header_link {
+    text-decoration: none;
+    display: inline- block;
+    padding: 8px;
+    color: #FFEFD2;
+    font-size:20px;
+    margin-top: 15px;
+    }
+    
+    nav
+    {
+    background-color: #681919;
+    height:auto;
+     display:flex;}
+     
+     
+    .search-container{
+    height: 30px;
+     width: 250px;
+     font-size: 15px;
+     }
