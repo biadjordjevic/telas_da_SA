@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="tela_login.css">
+    <script src="telas.js"></script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -13,35 +15,41 @@
             <li> <a class= header_link href= "#"> Inicio</a> </li>
             <li> <a class= header_link  href= "#"> A farsa da boa preguiça</a> </li>
             <input class= search-container type = "text" name = "search" placeholder = "search..."> 
-            </ul>
-            
-            </nav>
+            </ul>  
+        </nav>
+
     </header>
+
     <img src="logobg.png" alt="logo">
+
     <div class="box">
-<div class="socorro">
-    <h1 class="login">Login</h1>
+
+        
+        <h1 class="login">Login</h1>
     
-<div class="dados">
+        <div class="dados">
     
-<!-- ajustar a posição os dados tanto nesse html quanto no outro -->
-    <input type="text" class="type_text" id="user_log" placeholder="Nome de usuario">
-    <input id="senha_log" class="type_text" type="password" placeholder="Senha" >
-</div>
-<div class="esqueceu">
-<a href="">Esqueceu a senha?</a>
-</div>
+             <!-- ajustar a posição os dados tanto nesse html quanto no outro -->
+             <input type="email" class="type_text" id="email_log" placeholder="Email do usuario">
+             <input id="senha_log" class="type_text" type="password" placeholder="Senha" >
+        </div>
 
-<div class="termos_priv">
-    <input class="input-left" type="checkbox" id="concordo">
-    <label>Lembre-se de mim</label>
-    <br><br>
-</div>
+        <div class="esqueceu">
+                
+             <a href="">Esqueceu a senha?</a>
 
-<button id="salvar" class='button' onclick= "Login()">Logar</button>
+        </div>
 
-<p>Não tem uma conta? <a href="tela_cadastro.html">Cadastra-se</a></p>
-</div>
+        <div class="termos_priv">
+             <input class="input-left" type="checkbox" id="concordo">
+             <label>Lembre-se de mim</label>
+             <br><br>
+        </div>
+
+        <button id="salvar" class='button' onclick= "Login()">Logar</button>
+
+        <p>Não tem uma conta? <a href="tela_cadastro.html">Cadastra-se</a></p>
+    </div>
 
 </body>
 </html>

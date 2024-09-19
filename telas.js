@@ -3,37 +3,53 @@ let botão =  document.getElementById ('button')
 function Cadastro(){
     
 // dados cadastro
-    const user_cad = document.getElementById("user_cad");
-    const email_cad = document.getElementById("email_cad");
-    const senha_cad = document.getElementById("senha_cad");
-    const senha_confirm_cad = document.getElementById("senha_confirm_cad");
 
-    if(!user_cad.value || !email_cad.value || !senha_cad.value || !senha_confirm_cad.value){
+    let user = document.getElementById("user_cad").value;
+    let email = document.getElementById("email_cad").value;
+    let senha = document.getElementById("senha_cad").value;
+    let senha_confirm = document.getElementById("senha_confirm_cad").value;
+    
+    
+
+    if(!user || !email|| !senha|| !senha_confirm){
         alert('Preencha todos os campos. ')
-    }
-    else if(senha_cad.value != senha_confirm_cad.value){
-            alert('A senha de confirmação não corresponde. ')
-    }
-    else{
+    }else if(senha == senha_confirm){
+        let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados")) || {};
+         
+    
+        if(bancoDeDados[email]){
+            alert("Email já cadastrado.");
+            return;
+        }
+
+        bancoDeDados[email] = { email: email, user: user, senha: senha };
+        localStorage.setItem("bancoDeDados", JSON.stringify(bancoDeDados));
+
         alert('Usuário cadastrado com sucesso!')
-        window.location.href="tela_login.html"
+        window.location.href="tela_login.html" 
+    }else{
+        alert('As senhas são diferentes!')
     }
+    
+  
+   
 }
 
 function Login(){
 // dados de login
-    const user_log = document.getElementById("user_log")
-    const senha_log = document.getElementById("senha_log")
 
-    let user= user_log.value
-    let senha= senha_log.value
-    
-    let banco_dados = JSON.parse(localStorage.getItem("bancoDeDados"))
-    if(banco_dados  ){
-        mensagem = "Nenhum usuário cadastrado até o momento"
+    let email = document.getElementById("email_log").value
+    let senha = document.getElementById("senha_log").value
+
+    // let email= email_log.value
+    // let senha= senha_log.value
+    let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"))
+
+    if (bancoDeDados[email] && bancoDeDados[email].senha === senha) {
+        alert("Login bem-sucedido!"); // Exibe mensagem se o login for bem-sucedido
+        window.location.href = "tela_inicio.html"; 
+        } else {
+        alert("Endereço de email ou senha incorretos."); // Exibe mensagem se o login falhar
     }
-    else{
-        
-    }
-    
+   
 }
