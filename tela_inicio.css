@@ -1,0 +1,48 @@
+body{
+    background-color: #1f2326 ;
+}
+
+ul li{
+    display: inline-block;
+    margin-top: 15px
+    }
+    
+    a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px;
+    color: #E6C17D;
+    font-size:larger;
+    margin-top: 15px;
+    }
+    
+    nav{
+    background-color: #681919;
+    height: 500px;
+     display:flex;
+    }
+     
+     input{
+    height: 30px;
+     width: 250px;
+     font-size: 15px;
+    
+    }
+
+.botao_cadastro{
+    text-decoration: none;
+    display: inline- block;
+    padding: 8px;
+    color: #ffffff;
+    font-size:larger;
+    margin-top: 15px;
+}
+
+.Menu{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px;
+    color: #FFEFD2;
+    font-size:x-large;
+    margin-top: 15px;
+}

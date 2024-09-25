@@ -53,3 +53,20 @@ function Login(){
     }
    
 }
+
+function Recp_senha(){
+ 
+    let email = document.getElementById("email_rec_senha").value;
+    let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"))
+
+    if(!email){
+        alert('Preencha o campo de email!')
+    }else if(!bancoDeDados[email]){
+        alert('Email não cadastrado!')
+    }
+    else{
+        //falta o codigo p enviar o email aqui !!!
+        alert('Email de confirmação foi enviado com sucesso!')
+        window.location.href="tela_login.html" 
+    }
+}
