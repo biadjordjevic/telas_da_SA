@@ -78,7 +78,7 @@ h1{
     font-weight: 400;
 }
 
-img{
+.logo_fundo{
     z-index: -1;
     position: absolute;
     top: 60px;

@@ -3,13 +3,13 @@ body{
 }
 
 ul li{
-    display: inline-block;
+    display: inline;
     margin-top: 15px
     }
     
     a {
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     padding: 8px;
     color: #E6C17D;
     font-size:larger;
@@ -31,7 +31,7 @@ ul li{
 
 .botao_cadastro{
     text-decoration: none;
-    display: inline- block;
+    display: inline;
     padding: 8px;
     color: #ffffff;
     font-size:larger;
@@ -40,9 +40,10 @@ ul li{
 
 .Menu{
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     padding: 8px;
     color: #FFEFD2;
     font-size:x-large;
     margin-top: 15px;
 }
+
