@@ -1,9 +1,19 @@
+*{
+    margin: 0;
+}
+
 body{
     text-align: center;
     align-items: center;
     background-color: #1f2326;
     margin: 0;
     overflow-x: hidden;
+    /* background-image: url('imgs/background2.png');
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center;  */
+    height: 100vh;
+    color: #333; 
 }
 
 header{
@@ -27,7 +37,9 @@ header{
     align-items: center;
     margin: auto;
     width: 35%;
-    margin-top: 3%;
+    padding: 20px;
+
+    
 }
 
 head{
@@ -42,6 +54,10 @@ a{
     margin-bottom:20px;
 }
 
+.dados{
+    padding: 30px;
+}
+
 .dados input{
         background-color: transparent;
         border: none;
@@ -50,7 +66,7 @@ a{
         margin-bottom: 20px;
         font-family: "Open Sans", sans-serif;
         height: 40px;
-        width: 400px;   
+        width: 100%;   
         font-size: 20px;    
         color:rgb(51, 51, 51)
 }
@@ -79,13 +95,14 @@ h1{
 }
 
 .logo_fundo{
-    z-index: -1;
+    z-index: -2;
     position: absolute;
-    top: 60px;
-    left: 800px;
-    height: 110%;
-    width: auto;
+    top: 100px;
+    left: 1100px;
+    height: 100vh;
+    
 }
+
 
 .termos_priv{
     margin-bottom: 1px;
@@ -138,8 +155,8 @@ nav{
      
 .search-container{
     height: 30px;
-     width: 250px;
-     font-size: 15px;
+    width: 250px;
+    font-size: 15px;
 }
 
 .rcp_senha{
@@ -158,3 +175,13 @@ nav{
         margin-right: 20px ;
     
     }
+    .carrinho{
+        display: none;
+        
+    }
+.centralizar{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}

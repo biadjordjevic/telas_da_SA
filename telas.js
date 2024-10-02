@@ -70,3 +70,15 @@ function Recp_senha(){
         window.location.href="tela_login.html" 
     }
 }
+var carrinho = document.getElementById('carrinho');
+function abr_carrinho(){
+    carrinho.style.display = "block"
+}
+function fecha_carrinho(){
+    carrinho.style.display = "none"
+}
+window.onclick = function fecha_carrinho_jnl(event){
+    if(event.target === carrinho){
+        carrinho.style.display = "none"
+    }
+}
