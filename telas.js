@@ -82,3 +82,17 @@ window.onclick = function fecha_carrinho_jnl(event){
         carrinho.style.display = "none"
     }
 }
+
+let abrirTermos = document.getElementById('abrir-termos')
+let fecharTermos = document.getElementById('fechar-termos')
+
+function TermosPriv(){
+    let modal = document.getElementById ('fade1')
+    modal.style.display = 'block';
+  
+}
+
+function FecharTermos(){
+    let modal = document.getElementById ('fade1')
+    modal.style.display = 'none';
+    }
