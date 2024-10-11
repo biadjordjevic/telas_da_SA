@@ -24,16 +24,13 @@ ul li{
     display: inline;
     padding: 8px;
     color: #E6C17D;
-    font-size:larger;
+    font-size:22px;
     margin-top: 15px;
     }
 
     nav{
         display: flex;
 align-items: center;
-
-
- 
     }
 .search-container{
     background-color:transparent;
@@ -41,8 +38,9 @@ align-items: center;
     border-bottom: 2px solid rgb(191, 189, 188);
     /* width: 50%; */
     height: 30px;
-  width: 350px;
+  width: 550px;
   font-size: 13px;
+  color: rgba(255, 255, 255, 0.705);
 }
 textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
@@ -62,9 +60,7 @@ height: auto ;
      
 .centralizar-header{
     display: flex;
-  
-    
-    
+
 }
 
 .header-content{
@@ -93,7 +89,7 @@ height: auto ;
     display: inline;
     padding: 8px;
     color: #ffffff;
-    font-size:larger;
+    font-size:25px;
     margin-top: 15px;
 }
 
@@ -103,9 +99,10 @@ height: auto ;
     flex-direction: row;
     padding: 8px;
     color: #FFEFD2;
-    font-size:x-large;
+    font-size:30px;
     margin-top: 15px;
 }
+
 
 .destaques{
     border: 1px red;
@@ -147,9 +144,11 @@ height: auto ;
 }
 
 .sobre{
+
     background-color: #681919;
     display: flex;
     margin-bottom: 20px;
+    
 }
 
 .logo-sobre{
@@ -164,6 +163,7 @@ height: auto ;
 .sobre-empresa{
     margin-right:30%;
     margin-left:20px;
+    padding-top: 70px;
 }
 
 .titulo-sobre{
@@ -174,6 +174,7 @@ height: auto ;
 .subtitulo-sobre{
     font-size: 30px;
     color: #E6C17D;
+    padding-bottom: 15px;
 
 }
 

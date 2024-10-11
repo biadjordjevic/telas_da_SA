@@ -104,8 +104,8 @@ h1{
 .logo_fundo{
     z-index: -2;
     position: absolute;
-    top: 100px;
-    left: 900px;
+    top: 180px;
+    left: 1300px;
     height: 200vh;
     width: 650px;
     
@@ -158,6 +158,7 @@ nav{
     background-color: #681919;
     height:auto;
     display:flex;
+   
     
 }
      
@@ -210,7 +211,7 @@ overflow: auto;
 
 #termos-modal{
     background-color: #FFEFD2;
-    width: 55%;
+    width: 50%;
    padding: 20px;
    z-index: 12; /* coloca esse contâiner sobreposto ao fundo */
    margin: auto;
