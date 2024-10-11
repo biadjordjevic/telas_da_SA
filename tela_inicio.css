@@ -8,10 +8,15 @@ body{
     overflow-x: hidden;
 }
 
+html{
+    scroll-behavior: smooth; 
+    /* essa propriedade aplica um efeito de scroll simples a página inteira*/
+}
 
 ul li{
     display: inline;
-    margin-top: 15px
+    margin-top: 15px;
+    
     }
     
     a {
@@ -25,9 +30,28 @@ ul li{
 
     nav{
         display: flex;
-      
+align-items: center;
+
+
+ 
     }
-    
+.search-container{
+    background-color:transparent;
+    border: none;
+    border-bottom: 2px solid rgb(191, 189, 188);
+    /* width: 50%; */
+    height: 30px;
+  width: 350px;
+  font-size: 13px;
+}
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    /* faz que quando, o input de pesquisar for clicado,
+     continue sem nenhuma borda de seleção */
+}
+
+
     .header{
     background-color: #681919;
     margin-top: 40px;
@@ -64,24 +88,6 @@ height: auto ;
     
 }
 
-.spam-header{
-    background-color: #E6C17D;
-   height: 200px;
-   padding: 10px;
-   width: 500px;
-}
-.centralizar-spam{
-display: flex;
-
-}
-
-     input{
-    height: 30px;
-     width: 250px;
-     font-size: 15px;
-    
-    }
-
 .botao_cadastro{
     text-decoration: none;
     display: inline;
@@ -93,7 +99,8 @@ display: flex;
 
 .Menu{
     text-decoration: none;
-    display: inline;
+    display:inline;
+    flex-direction: row;
     padding: 8px;
     color: #FFEFD2;
     font-size:x-large;
@@ -109,13 +116,14 @@ display: flex;
 }
 
 .destaques-mes{
-    width:auto;
+    width:70%;
     height: 70px;
     background-color: #C96D1C;
     padding: 2%;
-    /* margin: 0 auto; */
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 auto;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+    
 }
 
 .titulo-destaques{
@@ -130,7 +138,7 @@ display: flex;
 
     margin: 0 auto;
     margin-top: 4%;
-    width: 100%;
+    width: auto;
     height: auto;
     padding: 20px;
     background-color: #79756b;
@@ -141,6 +149,7 @@ display: flex;
 .sobre{
     background-color: #681919;
     display: flex;
+    margin-bottom: 20px;
 }
 
 .logo-sobre{
@@ -171,4 +180,12 @@ display: flex;
 .subtitulo-sobre2{
     font-size: 25px;
     color: #FFEFD2;
+}
+
+#voltar-menu{
+display: flex;
+justify-content: right;
+color: #ffffff;
+/* margin-top: 30px;
+margin-bottom: 30px; */
 }

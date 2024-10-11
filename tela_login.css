@@ -8,6 +8,7 @@ body{
     background-color: #1f2326;
     margin: 0;
     overflow-x: hidden;
+   overflow-y: hidden;
     /* background-image: url('imgs/background2.png');
     background-repeat: no-repeat; 
     background-attachment: fixed; 
@@ -74,6 +75,12 @@ a{
 .dados input::placeholder{
 color: rgb(191, 189, 188);
 }
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    /* faz que quando, o input de entrada for clicado,
+     continue sem nenhuma borda de seleção */
+}
 
 .button{
     width: 250px;
@@ -98,8 +105,9 @@ h1{
     z-index: -2;
     position: absolute;
     top: 100px;
-    left: 1100px;
-    height: 100vh;
+    left: 900px;
+    height: 200vh;
+    width: 650px;
     
 }
 
@@ -188,7 +196,7 @@ nav{
 
 #fade1{
 display: none; 
- position: fixed;
+ position: absolute;
  height: 100%;
  width: 100%;
  z-index: 11; 
@@ -202,8 +210,8 @@ overflow: auto;
 
 #termos-modal{
     background-color: #FFEFD2;
-    width: 50%;
-   padding: 30px;
+    width: 55%;
+   padding: 20px;
    z-index: 12; /* coloca esse contâiner sobreposto ao fundo */
    margin: auto;
    border-radius: 20px;
