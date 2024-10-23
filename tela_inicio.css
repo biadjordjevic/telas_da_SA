@@ -155,6 +155,7 @@ height: auto ;
     width: 25%; 
     max-width: 1000px; 
     height: auto; 
+    max-height: 350px;
     margin-left: 8%;
     margin-top: 5%;
     
@@ -187,6 +188,7 @@ height: auto ;
 display: flex;
 justify-content: right;
 color: #ffffff;
+margin-bottom: 15px;
 /* margin-top: 30px;
 margin-bottom: 30px; */
 }
