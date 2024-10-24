@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="tela_login.css">
+    <link rel="stylesheet" href="tela_cadastroadm.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
             <li> <a class= header_link href= "tela_inicio.html"> Inicio</a> </li>
-            <li> <a class= header_link  href= "#"> A farsa da boa preguiça</a> </li>
+            <li> <a class= header_link  href= "tela_inicio.html"> A farsa da boa preguiça</a> </li>
           
             </ul>  
         </nav>
@@ -27,21 +27,21 @@
     <div class="box">
 
         
-        <h1 class="rcp_senha">Cadastro adm</h1>
+        <h1 class="adm-login">Cadastro adm</h1>
 
-        <p class="msg_rcpSenha">Com a mensagem enviada na sua caixa de entrada, 
-            você pode atualizar a senha e fazer o login</p>
+        <p class="msg_admLogin">Coloque seus dados para a autenticação de administrador</p>
     
         <div class="dados">
     
              <!-- ajustar a posição os dados tanto nesse html quanto no outro -->
-             <input type="email" class="type_text" id="email_rec_senha" placeholder="Email do usuario">
+             <input type="email" class="type_text" id="email-adm" placeholder="Email do adm">
+             <input type="password" class="type_text" id="senha-adm" placeholder="Senha do adm"> 
             
         </div>
     
-        <button id="salvar" class='button' onclick= "Recp_senha()">Voltar</button>
+        <button id="para-cadastroLivros" class='button' onclick= "Continuar()" >Voltar</button>
 
-        <p>Voltar para o <a href="tela_login.html">login</a></p>
+        <p>Voltar para o <a href="tela_inicio.html">Início</a></p>
     </div>
 </div>
 

@@ -1,6 +1,5 @@
 *{
     margin: 0;
-
 }
 
 body{
@@ -15,16 +14,17 @@ body{
     background-attachment: fixed; 
     background-position: center;  */
     height: 100vh;
-    color: #333;
-
+    color: #333; 
 }
 
 header{
     background-color:  hsl(0, 61%, 25%);
     padding: 13px;
     margin:auto;
-
 }
+
+
+
 
 .flex{
     border: solid red;
@@ -32,7 +32,6 @@ header{
     flex-direction: row;
     margin-bottom: 1%;
     margin-top: 1%;
-
 }
 
 .box{
@@ -44,12 +43,12 @@ header{
     width: 35%;
     padding: 20px;
 
+    
 }
 
 head{
     align-content: center;
     text-align: center;
-
 }
 
 a{
@@ -57,12 +56,10 @@ a{
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     margin-bottom:20px;
-
 }
 
 .dados{
     padding: 30px;
-
 }
 
 .dados input{
@@ -75,21 +72,17 @@ a{
         height: 40px;
         width: 100%;   
         font-size: 20px;    
-        color:rgb(51, 51, 51);
-
+        color:rgb(51, 51, 51)
 }
 
 .dados input::placeholder{
-    color: rgb(191, 189, 188);
-
+color: rgb(191, 189, 188);
 }
-
 textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
     /* faz que quando, o input de entrada for clicado,
      continue sem nenhuma borda de seleção */
-
 }
 
 .button{
@@ -102,7 +95,6 @@ textarea:focus, input:focus {
     border: none;
     border-radius: 20px;
     font-family: "Open Sans", sans-serif;
-
 }
 
 h1{
@@ -110,7 +102,6 @@ h1{
     font-size: 45px;
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
-
 }
 
 .logo_fundo{
@@ -123,24 +114,21 @@ h1{
     
 }
 
+
 .termos_priv{
     margin-bottom: 1px;
     margin-top: 15px;
     text-align: left;
     color: #BFBDBC;
-
 }
 
 .input-left{
     margin-left: 17%;
-
 }
 
 .search-container button:hover {
     background: #ccc;
-
 }
-
 .search-container button {
     padding: 10px 15px;
     margin-top: 8px;
@@ -149,19 +137,16 @@ h1{
     font-size: 17px;
     border: none;
     cursor: pointer; 
-
 }
 
 .search-container {
     height: 5%;
     border: solid red;
-
 }
 
 ul li{
     display: inline-block;
-    margin-top: 15px;
-
+    margin-top: 15px
 }
     
 .header_link {
@@ -170,7 +155,6 @@ ul li{
     color: #FFEFD2;
     font-size:20px;
     margin-top: 15px;
-
 }
     
 nav{
@@ -178,86 +162,36 @@ nav{
     height:auto;
     display:flex;
    
+    
 }
      
 .search-container{
     height: 30px;
     width: 250px;
     font-size: 15px;
-
 }
 
-.rcp_senha{
-    color: hsl(0, 0%, 100%);
+.adm-login{
+    color: #E6C17D;
     font-size:xx-large;
     font-family: "Libre Baskerville", serif;
     font-weight: 400;}
 
-p{
-    color: #BFBDBC;
-}
+        p{
+            color: #BFBDBC;
+            margin-top: 10px;
+        }
 
-.msg_rcpSenha{
-    color: #bfbdbcb6;
-    margin-left: 20px ; 
-    margin-right: 20px ;
+    .msg_admLogin{
+        color: #bfbdbcb6;
+        margin-left: 20px ; 
+        margin-right: 20px ;
     
-}
-.carrinho{
-    display: none;
-
-}
-
+    }
+    
 .centralizar{
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
-}
-
-#fade1{
-    display: none; 
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 11; 
-    background-color:rgba(0,0,0,0.4);
-    overflow: auto; 
-    padding-top: 100px; 
-    left: 0;
-    top: 0;
-
-}
-
-#termos-modal{
-    background-color: #FFEFD2;
-    width: 50%;
-    padding: 20px;
-    z-index: 12; /* coloca esse contâiner sobreposto ao fundo */
-    margin: auto;
-    border-radius: 20px;
-    color: #555555;
-}
-
-.header-termos{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #888;
-    margin-bottom:10px ;
-
-}
-
-#termos-titulo{
-    color: #1f2326;;
-    font-size: x-large;
-}
-#fechar-termos{
-    height: 40px;
-    width: 60px;
-    border: 1px red; 
-    border-radius: 20px;
-   background-color: #00000000;
-    color: black;
-    font-size: x-large;
 }

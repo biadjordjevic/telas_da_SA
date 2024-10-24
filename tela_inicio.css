@@ -49,6 +49,15 @@ textarea:focus, input:focus {
      continue sem nenhuma borda de seleção */
 }
 
+#logo-header{
+    width: 25%; 
+    max-width: 1000px; 
+    height: auto; 
+    max-height: 420px;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
 
     .header{
     background-color: #681919;

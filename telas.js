@@ -1,8 +1,8 @@
 let botão =  document.getElementById ('button')
 
-function Cadastro(){
-    
 // dados cadastro
+
+function Cadastro(){
 
     let user = document.getElementById("user_cad").value;
     let email = document.getElementById("email_cad").value;
@@ -31,18 +31,15 @@ function Cadastro(){
         alert('As senhas são diferentes!')
     }
     
-  
-   
 }
 
+//dados Login
+
 function Login(){
-// dados de login
 
     let email = document.getElementById("email_log").value
     let senha = document.getElementById("senha_log").value
 
-    // let email= email_log.value
-    // let senha= senha_log.value
     let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"))
 
     if (bancoDeDados[email] && bancoDeDados[email].senha === senha) {
@@ -53,6 +50,8 @@ function Login(){
     }
    
 }
+
+//Recuperação de senha
 
 function Recp_senha(){
  
@@ -70,18 +69,23 @@ function Recp_senha(){
         window.location.href="tela_login.html" 
     }
 }
+
+//carrinho
+
 var carrinho = document.getElementById('carrinho');
 function abr_carrinho(){
     carrinho.style.display = "block"
 }
-function fecha_carrinho(){
+function fechar_carrinho(){
     carrinho.style.display = "none"
 }
-window.onclick = function fecha_carrinho_jnl(event){
+window.onclick = function fechar_carrinho_jnl(event){
     if(event.target === carrinho){
         carrinho.style.display = "none"
     }
 }
+
+// termos
 
 let abrirTermos = document.getElementById('abrir-termos')
 let fecharTermos = document.getElementById('fechar-termos')
@@ -96,3 +100,9 @@ function FecharTermos(){
     let modal = document.getElementById ('fade1')
     modal.style.display = 'none';
     }
+
+
+let paracadastroLivros = document.getElementById('para-cadastroLivros')
+function Continuar(){
+    window.location.href = "cadastro-produtos.html";
+}
