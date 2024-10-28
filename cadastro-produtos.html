@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="cadastro-produtos.css">
 </head>
 <body>
     <h1>Para cadastrar um novo produto, insira os dados necessários:</h1>
+<div class="dados-livros">
+    <label>Nome da obra </label><input class="input-dados" type="text">
+    <label>Nome do autor </label><input class="input-dados" type="text">
+    <label>Condição (novo, usado, seminovo) </label><input class="input-dados" type="text">
+    <label>Data de lançamento </label><input class="input-dados" type="date">
+    <label>Qual o valor? </label><input class="input-dados" type="number">
+    <label>Descrição (opcional) </label><input class="input-dados"  type="text">
+    <label>Insira o URL da capa da obra </label><input class="input-dados" type="text">
+
+    <button id="excluirItem" onclick="excluirItem()">Excluir item</button>
+
+</div>
+
+    
 </body>
 </html>

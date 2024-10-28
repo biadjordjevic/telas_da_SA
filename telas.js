@@ -102,7 +102,7 @@ function FecharTermos(){
     }
 
 
-let paracadastroLivros = document.getElementById('para-cadastroLivros')
-function Continuar(){
-    window.location.href = "cadastro-produtos.html";
-}
+    let paracadastroLivros = document.getElementById('para-cadastroLivros')
+    function Continuar(){
+        window.location.href = "cadastro-produtos.html";
+    }
