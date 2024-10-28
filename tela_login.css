@@ -10,10 +10,10 @@ body{
     margin: 0;
     overflow-x: hidden;
    overflow-y: hidden;
-    /* background-image: url('imgs/background2.png');
+     background-image: url('imgs/background2.png');
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-    background-position: center;  */
+    background-position: center; 
     height: 100vh;
     color: #333;
 
@@ -113,7 +113,7 @@ h1{
 
 }
 
-.logo_fundo{
+/* .logo_fundo{
     z-index: -2;
     position: absolute;
     top: 180px;
@@ -121,7 +121,7 @@ h1{
     height: 200vh;
     width: 650px;
     
-}
+} */
 
 .termos_priv{
     margin-bottom: 1px;

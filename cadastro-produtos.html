@@ -7,20 +7,38 @@
     <link rel="stylesheet" href="cadastro-produtos.css">
 </head>
 <body>
-    <h1>Para cadastrar um novo produto, insira os dados necessários:</h1>
+
+    <header>
+        <nav>
+            <ul>
+                <div class="cadastro-livros-header">
+                <h1>Para cadastrar um novo produto, insira os dados necessários:</h1>
+            </div>
+            </ul>  
+        </nav>
+
+    </header>
+
+    
 <div class="dados-livros">
-    <label>Nome da obra </label><input class="input-dados" type="text">
+
+    <label for="input-dados">Nome da obra </label><input name="input-dados" class="input-dados" type="text">
     <label>Nome do autor </label><input class="input-dados" type="text">
     <label>Condição (novo, usado, seminovo) </label><input class="input-dados" type="text">
     <label>Data de lançamento </label><input class="input-dados" type="date">
     <label>Qual o valor? </label><input class="input-dados" type="number">
+ 
+    <!-- <div class="input-dados2"> -->
+    
     <label>Descrição (opcional) </label><input class="input-dados"  type="text">
     <label>Insira o URL da capa da obra </label><input class="input-dados" type="text">
-
     <button id="excluirItem" onclick="excluirItem()">Excluir item</button>
-
+<!-- </div> -->
 </div>
+   
+<button id="voltar" onclick="Voltarinicio()">voltar</button>
 
-    
+
+    <script src="telas.js"></script>
 </body>
 </html>
