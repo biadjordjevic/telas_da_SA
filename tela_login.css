@@ -10,10 +10,11 @@ body{
     margin: 0;
     overflow-x: hidden;
    overflow-y: hidden;
-     background-image: url('imgs/background2.png');
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    background-position: center; 
+     background-image: url('imgs/background.png');
+     background-size: cover;
+     background-position: center; 
+     background-repeat: no-repeat; 
+     background-attachment: fixed; 
     height: 100vh;
     color: #333;
 
@@ -231,7 +232,7 @@ p{
 
 #termos-modal{
     background-color: #FFEFD2;
-    width: 50%;
+    width: 70%;
     padding: 20px;
     z-index: 12; /* coloca esse contâiner sobreposto ao fundo */
     margin: auto;
