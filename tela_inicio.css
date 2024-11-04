@@ -14,24 +14,25 @@ html{
 }
 
 ul li{
-    display: inline;
+    display: inline-block;
     margin-top: 15px;
     
-    }
+}
     
-    a {
+a {
     text-decoration: none;
     display: inline;
     padding: 8px;
     color: #E6C17D;
     font-size:22px;
     margin-top: 15px;
-    }
+}
 
-    nav{
-        display: flex;
-align-items: center;
-    }
+nav{
+    display: flex;
+    align-items: center;
+}
+
 .search-container{
     background-color:transparent;
     border: none;
@@ -47,10 +48,11 @@ textarea:focus, input:focus {
     outline: 0;
     /* faz que quando, o input de pesquisar for clicado,
      continue sem nenhuma borda de seleção */
+
 }
 
 #logo-header{
-    width: 25%; 
+    width: 450px; 
     max-width: 1000px; 
     height: auto; 
     max-height: 420px;
@@ -59,12 +61,12 @@ textarea:focus, input:focus {
 }
 
 
-    .header{
+.header{
     background-color: #681919;
     margin-top: 40px;
-padding: 10px;
-height: auto ;
-    }
+    padding: 10px;
+    height: auto ;
+}
 
      
 .centralizar-header{
@@ -89,7 +91,7 @@ height: auto ;
     font-size: 30px;
     color: #E6C17D;
     border-bottom: 4px solid white;
-    width: 200px;
+    width: 350px;
     
 }
 
@@ -100,6 +102,7 @@ height: auto ;
     color: #ffffff;
     font-size:25px;
     margin-top: 15px;
+
 }
 
 .Menu{
@@ -110,6 +113,7 @@ height: auto ;
     color: #FFEFD2;
     font-size:30px;
     margin-top: 15px;
+
 }
 
 
@@ -119,6 +123,7 @@ height: auto ;
     height: auto;
     padding: 8%;
     background-color:#1f2326 ;
+
 }
 
 .destaques-mes{
@@ -138,10 +143,10 @@ height: auto ;
     justify-content: center;
     margin-top: 0;
     color: #FFEFD2;
+
 }
 
 .container-destaques{
-
     margin: 0 auto;
     margin-top: 4%;
     width: auto;
@@ -150,10 +155,10 @@ height: auto ;
     background-color: #79756b;
     border: none;
     border-radius: 15px;
+
 }
 
 .sobre{
-
     background-color: #681919;
     display: flex;
     margin-bottom: 20px;
@@ -174,11 +179,13 @@ height: auto ;
     margin-right:30%;
     margin-left:20px;
     padding-top: 70px;
+    
 }
 
 .titulo-sobre{
     font-size: 70px;
     color: #ffffff;
+
 }
 
 .subtitulo-sobre{
@@ -191,13 +198,19 @@ height: auto ;
 .subtitulo-sobre2{
     font-size: 25px;
     color: #FFEFD2;
+
 }
 
 #voltar-menu{
-display: flex;
-justify-content: right;
-color: #ffffff;
-margin-bottom: 15px;
+    display: flex;
+    justify-content: right;
+    color: #ffffff;
+    margin-bottom: 15px;
 /* margin-top: 30px;
 margin-bottom: 30px; */
+}
+
+.carrinho{
+    display: none;
+
 }

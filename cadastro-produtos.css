@@ -36,16 +36,7 @@ header{
 
 }
 
-.box{
-    border-radius: 5%;
-    background-color: #8d95a693;
-    align-content: center;
-    align-items: center;
-    margin: auto;
-    width: 35%;
-    padding: 20px;
 
-}
 
 head{
     align-content: center;
@@ -75,7 +66,7 @@ head{
     /* flex-flow: column wrap; */
     flex-wrap: wrap;
     column-gap: 20px;
-    height: 83%;
+    height: 550px;
     width: 40%;
     
     
