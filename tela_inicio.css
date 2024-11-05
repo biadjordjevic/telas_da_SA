@@ -194,10 +194,31 @@ height: auto ;
 }
 
 #voltar-menu{
-display: flex;
-justify-content: right;
-color: #ffffff;
-margin-bottom: 15px;
-/* margin-top: 30px;
-margin-bottom: 30px; */
+    display: flex;
+    justify-content: right;
+    color: #ffffff;
+    margin-bottom: 15px;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+}
+.carrinho {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.conteudo_carrinho {
+    background-color: #fefefe;
+    position: absolute;
+    top: 10%; /* Posiciona 10% a partir do topo */
+    right: 0; /* Alinha o modal ao lado direito */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Ajuste para controlar a largura do modal */
 }
