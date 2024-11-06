@@ -111,3 +111,67 @@ function FecharTermos(){
     function Voltarinicio() {
         window.location.href = "tela_inicio.html";
     }
+
+
+// cadastrar produtos
+
+let salvarItem = document.getElementById('salvarItem')
+let excluirItem = document.getElementById('excluirItem')
+
+function salvarnovoItem(){
+    const nome = document.getElementById('nome').value;
+    const preco = document.getElementById('autor').value;
+    const quantidade = document.getElementById('condicoes').value;
+    const data = document.getElementById('data').value;
+    const descricao = document.getElementById('descricao').value;
+    const img = document.getElementById('img').value;
+
+    const produto = {
+        nome,
+        preco,
+        quantidade,
+        data,
+        descricao,
+        img
+    };
+
+    if (produto.nome && produto.preco && produto.quantidade && produto.descricao) {
+        let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+        produtos.push(produto);
+        const chave = `produto_${Date.now()}`;
+        localStorage.setItem(chave, JSON.stringify(produtos));
+    
+        
+        document.getElementById('nome').value = '';
+        document.getElementById('autor').value = '';
+        document.getElementById('condicoes').value = '';
+        document.getElementById('data').value = '';
+        document.getElementById('descricao').value = '';
+        document.getElementById('img').value = '';
+        
+    }
+    
+    else {
+        alert('Preencha todos os campos para cadastrar o produto!');
+    }
+
+
+}
+
+function exibirProdutos() {
+    const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+    const listaProdutos = document.getElementById('listaProdutos');
+    listaProdutos.innerHTML = '';
+
+    for (let i in produtos) {
+        const produto = produtos[i];
+        const li = document.createElement('li');
+        li.textContent = `${produto.nome} - ${produto.nome} -R$${produto.preco} - ${produto.descricao}`;
+    
+
+        li.appendChild(deleteBtn);
+        listaProdutos.appendChild(li);
+    }
+}
+
+

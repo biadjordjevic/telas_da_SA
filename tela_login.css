@@ -229,7 +229,7 @@ p{
 
 #termos-modal{
     background-color: #FFEFD2;
-    width: 70%;
+    width: 800px;
     padding: 20px;
     z-index: 12; /* coloca esse contâiner sobreposto ao fundo */
     margin: auto;

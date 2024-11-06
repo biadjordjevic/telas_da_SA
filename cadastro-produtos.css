@@ -117,8 +117,8 @@ color:#FFEFD2
     height: 40px;
     font-size: 15px; 
     padding: 8px; 
-    background-color: #D9D9D9;
-    color: #000000; 
+    background-color: hsla(0, 61%, 25%, 0.795);
+    color: #c7c7c7; 
     border: none;
     border-radius: 20px;
     font-family: "Open Sans", sans-serif;
@@ -137,4 +137,22 @@ color:#FFEFD2
         border-radius: 20px;
         font-family: "Open Sans", sans-serif;
     
+}
+
+#salvarItem{
+    margin: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px; 
+    padding: 8px; 
+    background-color: #D9D9D9;
+    color: #000000; 
+    border: none;
+    border-radius: 20px;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+.container-botoes{
+display: flex;
 }
