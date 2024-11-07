@@ -42,6 +42,7 @@ nav{
 }
 
 
+
 textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
@@ -74,7 +75,7 @@ textarea:focus, input:focus {
 }
 
 .header-content{
-    margin-right:30%;
+    margin-right:300px;
     margin-left:20px;
     margin-top: 8%;
     height: auto;  
@@ -247,4 +248,22 @@ textarea:focus, input:focus {
     padding: 20px;
     border: 1px solid #888;
     width: 30%; /* Ajuste para controlar a largura do modal */
+}
+
+.produtos-box img {
+    height: 300px;
+    width: 200px;
+    padding: 20px;
+    background-color: #fefefe;
+    border: none;
+    border-radius: 20px;
+}
+
+.produtos-box{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    font-size: 20px;
+    color: #000000;
+
 }
