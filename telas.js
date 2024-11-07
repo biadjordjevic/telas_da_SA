@@ -70,20 +70,7 @@ function Recp_senha(){
     }
 }
 
-//carrinho
 
-var carrinho = document.getElementById('carrinho');
-function abr_carrinho(){
-    carrinho.style.display = "block"
-}
-function fechar_carrinho(){
-    carrinho.style.display = "none"
-}
-window.onclick = function fechar_carrinho_jnl(event){
-    if(event.target === carrinho){
-        carrinho.style.display = "none"
-    }
-}
 
 // termos
 
@@ -102,10 +89,6 @@ function FecharTermos(){
     }
 
 
-    let paracadastroLivros = document.getElementById('para-cadastroLivros')
-    function Continuar(){
-        window.location.href = "cadastro-produtos.html";
-    }
 
     let voltarInicio = document.getElementById('voltar')
     function Voltarinicio() {
@@ -119,36 +102,37 @@ let salvarItem = document.getElementById('salvarItem')
 let excluirItem = document.getElementById('excluirItem')
 
 function salvarnovoItem(){
+  
     const nome = document.getElementById('nome').value;
-    const preco = document.getElementById('autor').value;
-    const quantidade = document.getElementById('condicoes').value;
+    const autor = document.getElementById('autor').value;
+    const condicao = document.getElementById('condicoes').value;
     const data = document.getElementById('data').value;
+    const valor = document.getElementById('valor').value;
     const descricao = document.getElementById('descricao').value;
-    const img = document.getElementById('img').value;
+    const url_img = document.getElementById('img').value;
+
 
     const produto = {
         nome,
-        preco,
-        quantidade,
+        autor,
+        condicao,
         data,
+        valor,
         descricao,
-        img
+        url_img,
     };
 
-    if (produto.nome && produto.preco && produto.quantidade && produto.descricao) {
+    if (produto.nome && produto.autor && produto.condicao && produto.descricao && produto.url_img && produto.valor && produto.data) {
         let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
         produtos.push(produto);
-        const chave = `produto_${Date.now()}`;
-        localStorage.setItem(chave, JSON.stringify(produtos));
+        // const chave = `produto_${Date.now()}`;
+        localStorage.setItem('produtos', JSON.stringify(produtos));
     
         
-        document.getElementById('nome').value = '';
-        document.getElementById('autor').value = '';
-        document.getElementById('condicoes').value = '';
-        document.getElementById('data').value = '';
-        document.getElementById('descricao').value = '';
-        document.getElementById('img').value = '';
-        
+       
+        limparFormulario()
+
+        exibirProdutos()
     }
     
     else {
@@ -156,6 +140,16 @@ function salvarnovoItem(){
     }
 
 
+}
+function limparFormulario(){
+    document.getElementById('nome').value = '';
+    document.getElementById('autor').value = '';
+    document.getElementById('condicoes').value = '';
+    document.getElementById('data').value = '';
+    document.getElementById('valor').value = '';
+    document.getElementById('descricao').value = '';
+    document.getElementById('img').value = '';
+    
 }
 
 function exibirProdutos() {
@@ -166,12 +160,39 @@ function exibirProdutos() {
     for (let i in produtos) {
         const produto = produtos[i];
         const li = document.createElement('li');
-        li.textContent = `${produto.nome} - ${produto.nome} -R$${produto.preco} - ${produto.descricao}`;
-    
 
+        const img = document.createElement('img');
+        img.src = produto.url_img;
+        img.style.margin ='10px';
+        img.style.width ='100px';
+        img.style.height ='auto';
+
+        li.textContent = `${produto.nome} - ${produto.condicao} - -R$${produto.valor}` ;
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Deletar';
+        deleteBtn.classList.add('delete-btn');
+        deleteBtn.onclick = () => deletarProduto();
+    
+        li.appendChild(img);
         li.appendChild(deleteBtn);
         listaProdutos.appendChild(li);
+
+
     }
 }
 
+function deletarProduto(index){
 
+    let produtos = JSON.parse(localStorage.getItem('produtos'));
+    produtos.splice(index,1);
+    localStorage.setItem('produtos',JSON.stringify(produtos));
+    exibirProdutos()
+}
+
+function limparProdutos() {
+    localStorage.removeItem('produtos');
+    exibirProdutos();
+}
+
+window.onload = exibirProdutos;
