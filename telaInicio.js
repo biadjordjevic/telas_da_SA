@@ -40,13 +40,15 @@ function exibirProdutos(){
 
         const nome= document.createElement('p')
         nome.textContent = produto.nome;
+        nome.classList.add('nome-produto')
 
         const valor = document.createElement('p');
         valor.innerHTML =  `<span>Preço:</span> R$${produto.valor}`;
-
+        valor.classList.add('valor-produto')
+        
         const condicao = document.createElement('p');
         condicao.innerHTML = `<span>Descrição:</span> ${produto.condicao}`;
-
+        condicao.classList.add('condicao-produto')
 
         li.appendChild(img);
         li.appendChild(nome);
