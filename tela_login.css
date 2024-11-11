@@ -21,6 +21,7 @@ body{
 }
 
 header{
+    height: 40px;
     background-color:  hsl(0, 61%, 25%);
     padding: 13px;
     margin:auto;

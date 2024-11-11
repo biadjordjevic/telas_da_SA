@@ -13,12 +13,24 @@ window.onclick = function fechar_carrinho_jnl(event){
     }
 }
 
-// ir para a página de cadastro de produtos
+// ir para a página de cadastro de produtos - TELA DO ADM
 
 let paracadastroLivros = document.getElementById('para-cadastroLivros')
 function Continuar(){
-    window.location.href = "cadastro-produtos.html";
+    const email_adm = "adm@gmail.com"
+    const senha_adm = 1234
+
+    let email = document.getElementById('email-adm').value
+    let senha = document.getElementById('senha-adm').value
+
+    if(senha == senha_adm & email == email_adm){
+        alert('Bem vindo!!')
+        window.location.href = "cadastro-produtos.html";
+    }else{
+        alert('Senha ou email errado, tente novamente')
+    }
 }
+    
 
 
 // chama o produto
@@ -43,11 +55,11 @@ function exibirProdutos(){
         nome.classList.add('nome-produto')
 
         const valor = document.createElement('p');
-        valor.innerHTML =  `<span>Preço:</span> R$${produto.valor}`;
+        valor.innerHTML =  `R$${produto.valor}`;
         valor.classList.add('valor-produto')
         
         const condicao = document.createElement('p');
-        condicao.innerHTML = `<span>Descrição:</span> ${produto.condicao}`;
+        condicao.innerHTML = ` ${produto.condicao}`;
         condicao.classList.add('condicao-produto')
 
         li.appendChild(img);

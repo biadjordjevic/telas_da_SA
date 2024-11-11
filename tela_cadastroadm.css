@@ -41,6 +41,7 @@ header{
     align-items: center;
     margin: auto;
     width: 35%;
+    height: 45%;
     padding: 20px;
 
     
@@ -173,14 +174,14 @@ nav{
 
 .adm-login{
     color: #E6C17D;
-    font-size:xx-large;
+    font-size:300%;
     font-family: "Libre Baskerville", serif;
     font-weight: 400;}
 
         p{
             color: #BFBDBC;
             margin-top: 10px;
-        }
+        }i
 
     .msg_admLogin{
         color: #bfbdbcb6;
