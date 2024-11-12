@@ -156,3 +156,16 @@ color:#FFEFD2
 .container-botoes{
 display: flex;
 }
+
+.delete-btn{
+    margin: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px; 
+    padding: 8px; 
+    background-color: hsla(0, 61%, 25%, 0.795);
+    color: #c7c7c7; 
+    border: none;
+    border-radius: 20px;
+    font-family: "Open Sans", sans-serif; 
+}

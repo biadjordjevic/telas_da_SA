@@ -9,9 +9,9 @@ body{
     background-color: #1f2326;
     margin: 0;
     overflow-x: hidden;
-   overflow-y: hidden;
+   overflow-y: auto;
      background-image: url('imgs/background.png');
-     background-size: cover;
+     background-size:cover;
      background-position: center; 
      background-repeat: no-repeat; 
      background-attachment: fixed; 
@@ -38,12 +38,13 @@ header{
 }
 
 .box{
-    border-radius: 5%;
+    border-radius: 20px;
     background-color: #8d95a693;
     align-content: center;
     align-items: center;
     margin: auto;
-    width: 35%;
+    width: 550px;
+   
     padding: 20px;
 
 }

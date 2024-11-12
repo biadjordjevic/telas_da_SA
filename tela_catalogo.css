@@ -1,0 +1,106 @@
+
+
+
+*{
+    margin: 0%;
+}
+
+body{
+    background-color: #1f2326 ;
+    overflow-x: hidden;
+}
+.produtos{
+    border: 1px red;
+    width: auto;
+    height: auto;
+    padding: 8%;
+    background-color:#E6C17D ;
+}
+
+.todos-produtos{
+    width:70%;
+    height: 70px;
+    background-color: #1f2326;
+    padding: 2%;
+    margin: 0 auto;
+}
+
+.titulo-produtos{
+    font-size: 65px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    color: #FFEFD2;
+}
+
+.produto-item:hover {
+    transform: scale(1.05);
+   
+}
+
+.container-produtos{
+    margin: 0 auto;
+    margin-top: 4%;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background-color: #681919;
+    border: none;
+    border-radius: 15px;
+    
+}
+
+.nome-produto{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.valor-produto{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+
+.produto-item{
+    height: fit-content;
+    width: 200px;
+    padding: 20px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #000000;
+    font-family: "Libre Baskerville", serif;
+}
+
+.produto-img {
+    width: 100%;
+    height: fit-content;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.363);
+}
+
+.condicao-produto{
+    font-size: 18px;
+    color: #000000;
+   
+}
+
+
+
+.container-produtos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  gap: 20px;
+    padding: 50px;
+    margin: 20px;
+    list-style-type: none;
+
+}

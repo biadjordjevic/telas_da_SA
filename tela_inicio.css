@@ -13,8 +13,9 @@ html{
 }
 
 ul li{
-    display: inline-block;
+    display: inline;
     /* margin-top: 15px;   */
+    
     
 }
     
@@ -29,11 +30,12 @@ a {
 
 nav{
     display: flex;
-    align-items: center;
+    /* align-items: center;
     flex-direction: row;
-    flex-wrap: nowrap;
-    /* margin: 0 auto; */
-    width: 2000px;
+    flex-wrap: nowrap; 
+     margin: 0 auto; 
+    width: 100%; */
+    max-width: 1200px;
     align-items: center;
 }
 
@@ -71,11 +73,13 @@ textarea:focus, input:focus {
     margin-top: 40px;
     padding: 10px;
     height: auto ;
+    
 }
 
      
 .centralizar-header{
     display: flex;
+    
 
 }
 
@@ -162,7 +166,7 @@ textarea:focus, input:focus {
 }
 
 /* produtos */
-
+/* 
 
 
 .produtos{
@@ -254,7 +258,7 @@ textarea:focus, input:focus {
     column-gap: 20px;
     padding: 50px;
 
-}
+} */
 /* sobre */
 
 .sobre{
