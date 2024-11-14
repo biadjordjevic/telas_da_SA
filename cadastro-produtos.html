@@ -23,8 +23,13 @@
 <div class="dados-livros">
 
     <label>Nome da obra </label><input  id="nome" name="input-dados" class="input-dados" type="text">
-    <label>Nome do autor </label><input id="autor" class="input-dados" type="text">
-    <label>Condição (novo, usado, seminovo) </label><input id="condicoes" class="input-dados" type="text">
+    <label>Nome do autor </label><input id="autor" class="input-dados" type="text">           
+    <select id="condicoes" class="input-dados" type="select">     
+        <option value="">Escolha uma condição</option>  
+        <option value="Novo">Novo</option>  
+        <option value="Seminovo">Seminovo</option>
+        <option value="Usado">Usado</option>
+    </select>
     <label>Data de lançamento </label><input id="data" class="input-dados" type="date">
     <label>Qual o valor? </label><input id="valor" class="input-dados" type="number">
     

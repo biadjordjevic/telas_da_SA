@@ -71,4 +71,46 @@ function exibirProdutos(){
 
 }
 
-window.onload = exibirProdutos;
+function exibirDestaques (){
+    const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+
+    const listaDestaques = document.getElementById('listaDestaques');
+
+    listaDestaques.innerHTML = '';
+
+    for(let produto of produtos){
+
+        if(produto.destaque === true){
+        const li = document.createElement ('li')
+        li.classList.add('produto-item');
+
+        const img = document.createElement('img')
+        img.src = produto.url_img;
+        img.alt = produto.nome;
+        img.classList.add('produto-img')
+
+        const nome= document.createElement('p')
+        nome.textContent = produto.nome;
+        nome.classList.add('nome-produto')
+
+        const valor = document.createElement('p');
+        valor.innerHTML =  `R$${produto.valor}`;
+        valor.classList.add('valor-produto')
+        
+        const condicao = document.createElement('p');
+        condicao.innerHTML = ` ${produto.condicao}`;
+        condicao.classList.add('condicao-produto')
+
+        li.appendChild(img);
+        li.appendChild(nome);
+        li.appendChild(valor);
+        li.appendChild(condicao);
+        listaDestaques.appendChild(li);
+    }
+    }
+}
+
+window.addEventListener('load', function() {
+    exibirProdutos();
+    exibirDestaques();
+})

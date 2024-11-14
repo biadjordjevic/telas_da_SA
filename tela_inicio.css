@@ -153,7 +153,7 @@ textarea:focus, input:focus {
     color: #FFEFD2;
 }
 
-.container-destaques{
+.container-produtos{
     margin: 0 auto;
     margin-top: 4%;
     width: auto;
@@ -164,9 +164,8 @@ textarea:focus, input:focus {
     border-radius: 15px;
 }
 
-/* produtos */
+/*  */
 /* 
-
 
 .produtos{
     border: 1px red;
@@ -253,9 +252,14 @@ textarea:focus, input:focus {
 
 .container-produtos{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    column-gap: 20px;
+  gap: 20px;
     padding: 50px;
+    margin: 20px;
+    list-style-type: none;
 
 } */
 /* sobre */

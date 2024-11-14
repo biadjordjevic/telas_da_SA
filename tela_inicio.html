@@ -15,12 +15,16 @@
         <ul>
             <li class="Menu">Menu</li>
             <li> 
-                <a href= "#sobre">A farsa da boa preguiça &#8595;</a> 
+                <a href= "#sobre">|  A farsa da boa preguiça &#8595;</a> 
             </li>
               <!-- <div  class="img-login-centralizar"> -->
                 <!-- <img src="imgs/cadastro-img.png" alt="img-pessoa" id="img-cadastro"> -->
             <li> 
-                <a href= "tela_cadastroadm.html"> Adicione mais livros clicando no aqui</a> 
+                <a href= "tela_cadastroadm.html">|  Adicione mais livros clicando no aqui</a> 
+            </li>
+
+            <li>
+                <a href="tela_catalogo.html">|  Ver todos os livros</a>
             </li>
              <!-- </div> -->
             </ul>
@@ -30,10 +34,16 @@
             <input class= search-container type = "text" name = "search" placeholder = "Procure pelo nome de uma obra, autor ou gênero..."> 
         </div>
 
-        <div class="img-carrinho">
+        <div class="img-perfil" style="display: flex;">
+            <img src="imgs/cadastro-img.png" alt="perfil" type= button id="abrir-carrinho" href= "tela_cadastroadm.html" >
             <a class="botao_cadastro" href="tela_cadastro.html">Cadastro/Login</a>
+        </div>
+
+        <div class="img-carrinho">
             <img src="imgs/carrinho.png" alt="carrinho" type= button id="abrir-carrinho" onclick="abr_carrinho()">
         </div>
+
+       
     <!--Carrinho-->
      
     <div class="carrinho" id="carrinho">
@@ -67,10 +77,15 @@
 <div class="destaques-mes">
   <h2 class="titulo-destaques">Destaques do mês</h2>  
 </div>
-<div class="container-destaques">
+<div class="produtos">
+    
+    <div class="container-produtos">
+        
+        <ul id="listaDestaques" class="produtos-box"></ul> 
 
+    </div>
+    </div>
 
-    <button id="adicionar-destaques">Clique aqui para adicionar destaques no container</button>
 </div>
 </div>
 

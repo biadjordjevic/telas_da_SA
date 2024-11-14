@@ -110,8 +110,7 @@ function salvarnovoItem(){
     const valor = document.getElementById('valor').value;
     const descricao = document.getElementById('descricao').value;
     const url_img = document.getElementById('img').value;
-
-
+    const destaque = false;
     const produto = {
         nome,
         autor,
@@ -120,6 +119,7 @@ function salvarnovoItem(){
         valor,
         descricao,
         url_img,
+        destaque,
     };
 
     if (produto.nome && produto.autor && produto.condicao && produto.descricao && produto.url_img && produto.valor && produto.data) {
@@ -172,10 +172,22 @@ function exibirProdutos() {
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Deletar';
         deleteBtn.classList.add('delete-btn');
-        deleteBtn.onclick = () => deletarProduto();
+        deleteBtn.onclick = () => deletarProduto(i);
     
+        const destaquebtn = document.createElement('button');
+        destaquebtn.textContent = 'Destaque';
+        destaquebtn.classList.add('destaque-btn');
+        destaquebtn.onclick = () => destacarProduto(i);
+
+        const deldestaquebtn = document.createElement('button');
+        deldestaquebtn.textContent = 'Remover-destaque';
+        deldestaquebtn.classList.add('deldestaque-btn');
+        deldestaquebtn.onclick = () => tirarDestaque(i);
+
         li.appendChild(img);
         li.appendChild(deleteBtn);
+        li.appendChild(destaquebtn);
+        li.appendChild(deldestaquebtn);
         listaProdutos.appendChild(li);
 
 
@@ -195,4 +207,38 @@ function limparProdutos() {
     exibirProdutos();
 }
 
+function destacarProduto(index){
+
+    let produtos = JSON.parse(localStorage.getItem('produtos'));
+
+    // Verifique se o índice é válido
+    if (produtos[index]) {
+        // Alterar o campo 'destaque' para true
+        produtos[index].destaque = true;
+
+        // Salvar novamente os produtos no localStorage
+        localStorage.setItem('produtos', JSON.stringify(produtos));
+
+        // Atualizar a exibição dos produtos
+        exibirProdutos();
+    } 
+}
+
+function tirarDestaque(index){
+
+    let produtos = JSON.parse(localStorage.getItem('produtos'));
+
+    // Verifique se o índice é válido
+    if (produtos[index]) {
+        // Alterar o campo 'destaque' para true
+        produtos[index].destaque = false;
+
+        // Salvar novamente os produtos no localStorage
+        localStorage.setItem('produtos', JSON.stringify(produtos));
+
+        // Atualizar a exibição dos produtos
+        exibirProdutos();
+    } 
+}
 window.onload = exibirProdutos;
+
