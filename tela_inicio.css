@@ -14,24 +14,19 @@ html{
 
 ul li{
     display: inline;
-    /* margin-top: 15px;   */
-    
-    
 }
     
 a {
     text-decoration: none;
     display: inline;
-    padding: 8px;
+    padding: 4px;
     color: #E6C17D;
     font-size:23px;
-    margin-top: 15px;
     
 }
 
 nav{
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     font-size: 12px !important;
@@ -111,10 +106,6 @@ textarea:focus, input:focus {
 }
 
 
-#abrir-carrinho {
-    height: 50px;
-    
-}
 
 
 
@@ -164,104 +155,7 @@ textarea:focus, input:focus {
     border-radius: 15px;
 }
 
-/*  */
-/* 
 
-.produtos{
-    border: 1px red;
-    width: auto;
-    height: auto;
-    padding: 8%;
-    background-color:#E6C17D ;
-}
-
-.todos-produtos{
-    width:70%;
-    height: 70px;
-    background-color: #1f2326;
-    padding: 2%;
-    margin: 0 auto;
-}
-
-.titulo-produtos{
-    font-size: 65px;
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-    color: #FFEFD2;
-}
-
-.produto-item:hover {
-    transform: scale(1.05);
-   
-}
-
-.container-produtos{
-    margin: 0 auto;
-    margin-top: 4%;
-    width: auto;
-    height: auto;
-    padding: 20px;
-    background-color: #681919;
-    border: none;
-    border-radius: 15px;
-    
-}
-
-.nome-produto{
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.valor-produto{
-    font-weight: bold;
-    font-size: 25px;
-}
-
-
-
-.produto-item{
-    height: fit-content;
-    width: 200px;
-    padding: 20px;
-    background-color: #D9D9D9;
-    border: none;
-    border-radius: 20px;
-    font-size: 15px;
-    color: #000000;
-    font-family: "Libre Baskerville", serif;
-}
-
-.produto-img {
-    width: 100%;
-    height: fit-content;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.363);
-}
-
-.condicao-produto{
-    font-size: 18px;
-    color: #000000;
-   
-}
-
-
-
-.container-produtos{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  gap: 20px;
-    padding: 50px;
-    margin: 20px;
-    list-style-type: none;
-
-} */
 /* sobre */
 
 .sobre{
@@ -307,7 +201,7 @@ textarea:focus, input:focus {
     color: #ffffff;
     margin-bottom: 15px;
 }
-
+ /* modal do carrinho */
 .carrinho {
     display: none; 
     position: fixed; 
@@ -323,17 +217,23 @@ textarea:focus, input:focus {
 .conteudo_carrinho {
     background-color: #fefefe;
     position: absolute;
-    top: 10%; /* Posiciona 10% a partir do topo */
-    right: 0; /* Alinha o modal ao lado direito */
+    top: 10%; 
+    right: 0; 
     padding: 20px;
     border: 1px solid #888;
-    width: 30%; /* Ajuste para controlar a largura do modal */
+    width: 30%; 
+    height: 600px;
 }
-
+/* icone do carrinho */
 .img-carrinho {
   
     display: flex;
 }
+#abrir-carrinho {
+    height: 50px;
+    
+}
+
 
 #lupa-img{
     height: 30px;

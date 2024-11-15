@@ -7,52 +7,42 @@
     <script src="telas.js"></script>
     <title>Document</title>
 </head>
-
-<body  >
-    
+<body>
     <header>
         <nav>
             <ul>
-            <li> <a class= header_link href= "tela_inicio.html"> Inicio</a> </li>
-            <li> <a class= header_link  href= "#"> A farsa da boa preguiça</a> </li>
-          
+                <li> <a class= header_link href= "tela_inicio.html"> Inicio</a> </li>
+                <li> <a class= header_link  href= "#"> A farsa da boa preguiça</a> </li>
             </ul>  
         </nav>
-
     </header>
 
-  <div class="logo_fundo">
+    <div class="logo_fundo">
         <!-- <img src="imgs/logobg.png" style="width: 112%;" alt="logo"> -->
     </div> 
     <div class="centralizar">
-    <div class="box">
-
-        
-        <h1 class="login">Login</h1>
+        <div class="box">
+            <h1 class="login">Login</h1>
     
-        <div class="dados">
-    
-             <!-- ajustar a posição os dados tanto nesse html quanto no outro -->
-             <input type="email" class="type_text" id="email_log" placeholder="Email do usuario">
-             <input id="senha_log" class="type_text" type="password" placeholder="Senha" >
+            <div class="dados">
+                <!-- ajustar a posição os dados tanto nesse html quanto no outro -->
+                <input type="email" class="type_text" id="email_log" placeholder="Email do usuario">
+                <input id="senha_log" class="type_text" type="password" placeholder="Senha" >
+            </div>
+
+            <div class="esqueceu"> 
+                <a href="recuperação_senha.html">Esqueceu a senha?</a>
+            </div>
+
+            <div class="termos_priv">
+                <input class="input-left" type="checkbox" id="concordo">
+                <label>Lembre-se de mim</label>
+                <br><br>
+            </div>
+
+            <button id="salvar" class='button' onclick= "Login()">Logar</button>
+            <p>Não tem uma conta? <a href="tela_cadastro.html">Cadastra-se</a></p>
         </div>
-
-        <div class="esqueceu">
-                
-             <a href="recuperação_senha.html">Esqueceu a senha?</a>
-
-        </div>
-
-        <div class="termos_priv">
-             <input class="input-left" type="checkbox" id="concordo">
-             <label>Lembre-se de mim</label>
-             <br><br>
-        </div>
-
-        <button id="salvar" class='button' onclick= "Login()">Logar</button>
-
-        <p>Não tem uma conta? <a href="tela_cadastro.html">Cadastra-se</a></p>
     </div>
-</div>
 </body>
 </html>

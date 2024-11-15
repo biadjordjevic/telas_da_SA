@@ -7,45 +7,34 @@
     <link rel="stylesheet" href="cadastro-produtos.css">
 </head>
 <body>
-
     <header>
         <nav>
             <ul>
                 <div class="cadastro-livros-header">
-                <h1>Para cadastrar um novo produto, insira os dados necessários:</h1>
-            </div>
+                    <h1>Para cadastrar um novo produto, insira os dados necessários:</h1>
+                </div>
             </ul>  
         </nav>
-
     </header>
     <button id="voltar" onclick="Voltarinicio()">&#8592;</button>
-    
-<div class="dados-livros">
-
-    <label>Nome da obra </label><input  id="nome" name="input-dados" class="input-dados" type="text">
-    <label>Nome do autor </label><input id="autor" class="input-dados" type="text">           
-    <select id="condicoes" class="input-dados" type="select">     
-        <option value="">Escolha uma condição</option>  
-        <option value="Novo">Novo</option>  
-        <option value="Seminovo">Seminovo</option>
-        <option value="Usado">Usado</option>
-    </select>
-    <label>Data de lançamento </label><input id="data" class="input-dados" type="date">
-    <label>Qual o valor? </label><input id="valor" class="input-dados" type="number">
-    
-    <label>Descrição (opcional) </label><input id="descricao" class="input-dados-descricao"  type="text">
-    <label>Insira o URL da capa da obra </label><input id="img" class="input-dados" type="text">
-    <div class="container-botoes">
-    <button id="salvarItem" onclick="salvarnovoItem()">Salvar item</button>
-
-</div>
-<!-- </div> -->
-</div>
-<ul id="listaProdutos"></ul>
-   
-
-
-
+    <div class="dados-livros">
+        <label>Nome da obra </label><input  id="nome" name="input-dados" class="input-dados" type="text">
+        <label>Nome do autor </label><input id="autor" class="input-dados" type="text">           
+        <select id="condicoes" class="input-dados" type="select">     
+            <option value="">Escolha uma condição</option>  
+            <option value="Novo">Novo</option>  
+            <option value="Seminovo">Seminovo</option>
+            <option value="Usado">Usado</option>
+        </select>
+        <label>Data de lançamento </label><input id="data" class="input-dados" type="date">
+        <label>Qual o valor? </label><input id="valor" class="input-dados" type="number">
+        <label>Descrição (opcional) </label><input id="descricao" class="input-dados-descricao"  type="text">
+        <label>Insira o URL da capa da obra </label><input id="img" class="input-dados" type="text">
+        <div class="container-botoes">
+            <button id="salvarItem" onclick="salvarnovoItem()">Salvar item</button>
+        </div>
+    </div>
+    <ul id="listaProdutos"></ul>
     <script src="telas.js"></script>
 </body>
 </html>

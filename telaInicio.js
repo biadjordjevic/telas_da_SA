@@ -71,7 +71,7 @@ function exibirProdutos(){
 
 }
 
-function exibirDestaques (){
+function exibirDestaques(){
     const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
 
     const listaDestaques = document.getElementById('listaDestaques');
@@ -80,7 +80,7 @@ function exibirDestaques (){
 
     for(let produto of produtos){
 
-        if(produto.destaque === true){
+        if(produto.destaque === true ){
         const li = document.createElement ('li')
         li.classList.add('produto-item');
 
@@ -110,7 +110,14 @@ function exibirDestaques (){
     }
 }
 
-window.addEventListener('load', function() {
-    exibirProdutos();
+// por algum motivo essa função não esta rodando por inteiro quando ocorre o window.onload 
+window.onload = mostrarprodutos;
+// por algum motivo a função exibirProdutos roda, mas não roda a segunda linha que é a de exibirDestaques, acredito que seja porque alguma coisa que é chamada na primeira função tem que ser limpa para que a sefunda possa ocorrer, mas não sei oque 
+function mostrarprodutos(){
+    
     exibirDestaques();
-})
+    exibirProdutos();
+}
+
+    
+

@@ -10,39 +10,30 @@
 </head>
 
 <body >
- 
     <header>
         <nav>
             <ul>
-            <li> <a class= header_link href= "tela_inicio.html"> Inicio</a> </li>
-            <li> <a class= header_link  href= "#"> A farsa da boa preguiça</a> </li>
-           
-         
+                <li> <a class= header_link href= "tela_inicio.html"> Inicio</a> </li>
+                <li> <a class= header_link  href= "#"> A farsa da boa preguiça</a> </li>
             </ul>   
         </nav>
     </header>
           
-     <div class="logo_fundo">
+    <div class="logo_fundo">
         <!-- <img src="/imgs/logobg.png" style="width: 112%;" alt="logo"> -->
     </div> 
 
         <!-- adicionar o menu -->
     <div class="centralizar">
         <div class="box">
-            
             <h1 class="titulo">Cadastro</h1>
-        
-    
             <div class="dados">
-        
             <!-- ajustar a posição os dados tanto nessa página quanto na outra -->
                 <input type="text" class="type_text" id="user_cad" placeholder="Nome de usuario">
                 <input type="email" id="email_cad" class="type_text" placeholder="Email">
                 <input id="senha_cad" class="type_text" type="password" placeholder="Senha" >
                 <input type="password" id="senha_confirm_cad" class="type_text" placeholder="Confirmação da senha">
-    
             </div>
-    
             <div class="termos_priv">
                 <input type="checkbox" id="concordo" value="">
                 <label for="concordo">Concordo com os <a id="abrir-termos" onclick="TermosPriv()" href="#">Termos de Política de Privacidade</a></label>
@@ -50,9 +41,11 @@
                 <div id="fade1">
                     <div id="termos-modal">
                         <div class="header-termos">
-                        <div id="termos-titulo"><b> Termos de Privacidade</b></div>
-                        <button id='fechar-termos' onclick="FecharTermos()"> &times; </button>
-                    </div> 
+                            <div id="termos-titulo">
+                                <b> Termos de Privacidade</b>
+                            </div>
+                            <button id='fechar-termos' onclick="FecharTermos()"> &times; </button>
+                        </div> 
                         <div id="termos-conteudo">Política de Privacidade
                             A sua privacidade é importante para nós. Na Farsa da Boa Preguiça, temos o compromisso de respeitar sua privacidade em relação a qualquer informação que possamos coletar em nosso site, Farsa da Boa Preguiça, ou em outros sites que possuímos e operamos.
                             Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemos isso por meios justos e legais, com o seu conhecimento e consentimento. Também explicamos por que estamos coletando essas informações e como elas serão usadas.
@@ -74,17 +67,12 @@
                             Mais Informações
                             Esperamos que esta política tenha esclarecido suas dúvidas. Se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro manter os cookies ativados, caso interaja com um dos recursos que utilizamos em nosso site.
                             Esta política é efetiva a partir de 8 de agosto de 2024.</div>
+                        </div>
                     </div>
                 </div>
+                <button id="button" class='button' onclick="Cadastro()">Cadastrar</button>
+                <p class="login">Já tem uma conta? <a href="tela_login.html">Login</a> </p>
             </div>
-    
-    
-            <button id="button" class='button' onclick="Cadastro()">Cadastrar</button>
-    
-    
-            <p class="login">Já tem uma conta? <a href="tela_login.html">Login</a> </p>
-    
-    
         </div>
     </div>
     

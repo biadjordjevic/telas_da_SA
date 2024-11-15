@@ -241,4 +241,3 @@ function tirarDestaque(index){
     } 
 }
 window.onload = exibirProdutos;
-
