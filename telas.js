@@ -122,7 +122,7 @@ function salvarnovoItem(){
         destaque,
     };
 
-    if (produto.nome && produto.autor && produto.condicao && produto.descricao && produto.url_img && produto.valor && produto.data) {
+    if (produto.nome && produto.autor && produto.condicao  && produto.url_img && produto.valor && produto.data) {
         let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
         produtos.push(produto);
         // const chave = `produto_${Date.now()}`;
