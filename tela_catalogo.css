@@ -1,6 +1,4 @@
 
-
-
 *{
     margin: 0%;
 }
@@ -8,6 +6,8 @@
 body{
     background-color: #1f2326 ;
     overflow-x: hidden;
+ 
+  
 }
 .produtos{
     border: 1px red;
@@ -60,8 +60,6 @@ body{
     font-size: 25px;
 }
 
-
-
 .produto-item{
     height: fit-content;
     width: 200px;
@@ -90,8 +88,6 @@ body{
    
 }
 
-
-
 .container-produtos{
     display: flex;
     flex-direction: row;
@@ -104,3 +100,25 @@ body{
     list-style-type: none;
 
 }
+
+#catalogo-para-inicio{
+    margin: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: 18px; 
+    padding: 8px; 
+    background-color: hsl(0, 61%, 25%);
+    color: #c7c7c7; 
+    border: none;
+    border-radius: 20px;
+    font-family: "Open Sans", sans-serif; 
+    text-decoration: none;
+    padding-bottom: 1px;
+    margin-top: 40px;
+  
+}
+
+.flex-btn-title{
+    display: flex;
+}
+

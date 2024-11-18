@@ -26,38 +26,45 @@
                     <a href="tela_catalogo.html">|  Ver todos os livros</a>
                 </li>
                 <!-- </div> -->
-            </ul>
-            <div class="img-lupa-centralizar" style="display: flex;">
+                </ul>
+                <div class="img-lupa-centralizar" style="display: flex;">
                 <img src="imgs/lupa.png" alt="lupa" id="lupa-img">
                 <input class= search-container type = "text" name = "search" placeholder = "Procure pelo nome de uma obra, autor ou gênero..."> 
-            </div>
+                 </div>
             <!-- por algum motivo essa imagem ta acima de todas as outras, tem que encontraroque ta causando isso e passar o style do dysplay p/ css  -->
-            <div class="img-perfil" style="display: flex;">
+                 <div class="img-perfil" style="display: flex;">
                 <img src="imgs/cadastro-img.png" alt="perfil" type= button id="abrir-carrinho" href= "tela_cadastroadm.html" >
                 <a class="botao_cadastro" href="tela_cadastro.html">Cadastro/Login</a>
-            </div>
-            <div class="img-carrinho">
+                </div>
+                 <div class="img-carrinho">
                 <img src="imgs/carrinho.png" alt="carrinho" type= button id="abrir-carrinho" onclick="abr_carrinho()">
-            </div>
+                </div>
+
+
+
         <!--Carrinho-->
             <div class="carrinho" id="carrinho">
                 <div class="conteudo_carrinho">
                     <div class="header_do_carrinho">
-                        <div class="botão de fechar carrinho">
-                            <!-- trocar pela img de x, para ficar um boão de fechar bonitinho e não essa coisa escrota que tá agora  -->
-                            <button id="fechar-carrinho" onclick="fechar_carrinho()">fechar</button>
+                        <h1 class="titulo_do_carrinho" >Meu carrinho</h1>
+                            <button id="fechar-carrinho" onclick="fechar_carrinho()">&times</button>
                         </div>
-                        <div class="titulo_do_carrinho">
-                            <!-- inserir uma h1 ou oque falta p ficar como nome do carrinho -->
-                        </div>
+                      <div class="produtos_dentro_do_carrinho">
+                        os produtos vem aqui, quando clicar em 'adicionar ao carrinho' <br>
+                        a <br>
+                        a <br>
+                        a <br>
+                        a <br>
+     <!-- pra trabalhar nessa merda falta o codigo js, que vai criar uma div p objeto com varias outras dentro que cumprem o papel de permitir adicionar quantidade nome do produto e removelo caso não o queira mais no carrinho -->
+     <!-- enquanto falta o codico focar em arrumar o botão de fechar e titulo do carrinho assim como a header da pagina principal  -->
+                            </div>        
                     </div>
-                    <div class="produtos_dentro_do_carrinho">
-                        <!-- pra trabalhar nessa merda falta o codigo js, que vai criar uma div p objeto com varias outras dentro que cumprem o papel de permitir adicionar quantidade nome do produto e removelo caso não o queira mais no carrinho -->
-                        <!-- enquanto falta o codico focar em arrumar o botão de fechar e titulo do carrinho assim como a header da pagina principal  -->
-                    </div>
+                   
                 
             </div>
         </nav>
+
+        
         <!-- painel do menu -->
         <div class="centralizar-header">
             <img id="logo-header"  src="imgs/logo-site.png" alt="logo">
@@ -81,21 +88,8 @@
     </div>
 
 
-    <a href="tela_catalogo.html"> ver mais produtos</a>
-    <!-- produtos
-
-    <div class="produtos">
-        <div class="todos-produtos">
-        <h2 class="titulo-produtos">Produtos</h2>  
-        </div>
-        <div class="container-produtos">
-            
-            <ul id="listaProdutos" class="produtos-box"></ul>
-
-        </div>
-        </div>
-    -->
-
+   
+    
         <!-- sobre -->
     <div id="sobre" class="sobre">
         <img class="logo-sobre" src="imgs/logo-site.png" alt="logo">

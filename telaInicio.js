@@ -71,53 +71,18 @@ function exibirProdutos(){
 
 }
 
-function exibirDestaques(){
-    const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
 
-    const listaDestaques = document.getElementById('listaDestaques');
-
-    listaDestaques.innerHTML = '';
-
-    for(let produto of produtos){
-
-        if(produto.destaque === true ){
-        const li = document.createElement ('li')
-        li.classList.add('produto-item');
-
-        const img = document.createElement('img')
-        img.src = produto.url_img;
-        img.alt = produto.nome;
-        img.classList.add('produto-img')
-
-        const nome= document.createElement('p')
-        nome.textContent = produto.nome;
-        nome.classList.add('nome-produto')
-
-        const valor = document.createElement('p');
-        valor.innerHTML =  `R$${produto.valor}`;
-        valor.classList.add('valor-produto')
-        
-        const condicao = document.createElement('p');
-        condicao.innerHTML = ` ${produto.condicao}`;
-        condicao.classList.add('condicao-produto')
-
-        li.appendChild(img);
-        li.appendChild(nome);
-        li.appendChild(valor);
-        li.appendChild(condicao);
-        listaDestaques.appendChild(li);
-    }
-    }
-}
 
 // por algum motivo essa função não esta rodando por inteiro quando ocorre o window.onload 
 window.onload = mostrarprodutos;
 // por algum motivo a função exibirProdutos roda, mas não roda a segunda linha que é a de exibirDestaques, acredito que seja porque alguma coisa que é chamada na primeira função tem que ser limpa para que a sefunda possa ocorrer, mas não sei oque 
 function mostrarprodutos(){
     
-    exibirDestaques();
+    // exibirDestaques();
     exibirProdutos();
 }
 
-    
+  p.innerHTML = produtos[0].nome
+
+
 
