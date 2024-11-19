@@ -6,9 +6,174 @@
 body{
     background-color: #1f2326 ;
     overflow-x: hidden;
- 
-  
 }
+
+
+/* header */
+body{
+    background-color: #1f2326 ;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth; 
+    /* essa propriedade aplica um efeito de scroll simples a página inteira*/
+}
+
+.header{
+    background-color: #681919;
+   
+   
+}
+.menu-ul-li{
+    display:flex;
+    list-style-type: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+    
+a {
+    text-decoration: none;
+    display: inline;
+    padding: 4px;
+    color: #E6C17D;
+    font-size:23px;
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px !important;
+    padding: 20px;
+}
+
+
+
+.search-container{
+    background-color:transparent;
+    border: none;
+    border-bottom: 2px solid rgb(191, 189, 188);
+    height: 30px;
+    width: 550px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.705);
+}
+
+
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    /* faz que quando, o input de pesquisar for clicado,
+     continue sem nenhuma borda de seleção */
+}
+
+
+
+
+
+.botao_cadastro{
+    text-decoration: none;
+    display: inline;
+    padding: 8px;
+    color: #ffffff;
+    font-size:25px;
+    margin-top: 15px;
+}
+
+.Menu-title{
+    text-decoration: none;
+    display:inline;
+    flex-direction: row;
+    padding: 8px;
+    color: #FFEFD2;
+    font-size:25px;
+}
+
+.carrinho {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.conteudo_carrinho {
+    background-color: #fefefe;
+    position: absolute;
+    top: 10%; 
+    right: 0; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; 
+    height: 600px;
+}
+/* icone do carrinho */
+.img-carrinho {
+   display: flex;
+}
+#abrir-carrinho {
+    height: 50px;
+}
+#lupa-img{
+    height: 30px;
+}
+.img-cadastro{
+    height: 30px;
+}
+
+.img-perfil{
+    display: flex;
+}
+
+.conteudo_carrinho{
+    background-color: #FFEFD2;
+    position: absolute;
+    width: 400px;
+    margin: 20px;
+    padding: 0%;
+    border: none;
+    height:auto;
+    border-radius: 20px;
+   
+}
+#fechar-carrinho{
+    color: #812323;
+    font: bolder;
+    font-size: 35px;
+    background-color: transparent;
+    border: none;
+}
+.header_do_carrinho{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f2326;
+   border:none;
+   align-items: center;
+   padding: 10px;
+   border-radius: 20px;
+   border-bottom: 2px #1f2326;
+   border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 0px;
+}
+
+.titulo_do_carrinho{
+    color: #FFEFD2;
+    font-size: 25px;
+    font-family:"Libre Baskerville", serif;
+
+}
+
+.produtos_dentro_do_carrinho{
+    padding: 20px;
+}
+
 .produtos{
     border: 1px red;
     width: auto;

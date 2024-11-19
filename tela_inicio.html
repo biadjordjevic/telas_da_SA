@@ -12,8 +12,8 @@
         <!-- menu  -->
     
         <nav>
-            <ul>
-                <li class="Menu">Menu</li>
+            <ul class="menu-ul-li">
+                <li class="Menu-title">Menu</li>
                 <li> 
                     <a href= "#sobre">|  A farsa da boa preguiça &#8595;</a> 
                 </li>
@@ -37,7 +37,7 @@
                 <a class="botao_cadastro" href="tela_cadastro.html">Cadastro/Login</a>
                 </div>
                  <div class="img-carrinho">
-                <img src="imgs/carrinho.png" alt="carrinho" type= button id="abrir-carrinho" onclick="abr_carrinho()">
+                <img src="imgs/carrinho.png" alt="carrinho" type= button id="abrir-carrinho" onclick=" exibirCarrinho()">
                 </div>
 
 
@@ -49,15 +49,9 @@
                         <h1 class="titulo_do_carrinho" >Meu carrinho</h1>
                             <button id="fechar-carrinho" onclick="fechar_carrinho()">&times</button>
                         </div>
-                      <div class="produtos_dentro_do_carrinho">
-                        os produtos vem aqui, quando clicar em 'adicionar ao carrinho' <br>
-                        a <br>
-                        a <br>
-                        a <br>
-                        a <br>
-     <!-- pra trabalhar nessa merda falta o codigo js, que vai criar uma div p objeto com varias outras dentro que cumprem o papel de permitir adicionar quantidade nome do produto e removelo caso não o queira mais no carrinho -->
-     <!-- enquanto falta o codico focar em arrumar o botão de fechar e titulo do carrinho assim como a header da pagina principal  -->
-                            </div>        
+                        <ul id="listaCarrinho"></ul>
+                         <div class="produtos_dentro_do_carrinho">
+                    </div>        
                     </div>
                    
                 
@@ -80,9 +74,11 @@
         <div class="destaques-mes">
             <h2 class="titulo-destaques">Destaques do mês</h2>  
         </div>
-        <div class="produtos">
+        <div class="produtos-destaques">
             <div class="container-produtos">
-                <ul id="listaDestaques" class="produtos-box"></ul> 
+                <div class="container-destaques-produtos">
+                <ul  id="listaDestaques" class="produtos-box"></ul>
+            </div>
             </div>
         </div>
     </div>
@@ -103,5 +99,6 @@
     </div>
 
     <script src="telaInicio.js"></script>
+    <script src="carrinho.js"></script>
 </body>
 </html>

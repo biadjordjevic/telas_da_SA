@@ -7,6 +7,53 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!-- header -->
+    <div id="menu" class="header">
+        <!-- menu  -->
+    
+        <nav>
+            <ul class="menu-ul-li">
+                <li class="Menu-title">Menu</li>
+                <li> 
+                    <a href= "tela_inicio.html">|  A farsa da boa preguiça &#8595;</a> 
+                </li>
+                <!-- <div  class="img-login-centralizar"> -->
+                    <!-- <img src="imgs/cadastro-img.png" alt="img-pessoa" id="img-cadastro"> -->
+                <li> 
+                    <a href= "tela_cadastroadm.html">|  Adicione mais livros clicando no aqui</a> 
+                </li>
+                <!-- </div> -->
+                </ul>
+                <div class="img-lupa-centralizar" style="display: flex;">
+                <img src="imgs/lupa.png" alt="lupa" id="lupa-img">
+                <input class= search-container type = "text" name = "search" placeholder = "Procure pelo nome de uma obra, autor ou gênero..."> 
+                 </div>
+            <!-- por algum motivo essa imagem ta acima de todas as outras, tem que encontraroque ta causando isso e passar o style do dysplay p/ css  -->
+                 <div class="img-perfil">
+                <img src="imgs/cadastro-img.png" alt="perfil" type= button id="abrir-carrinho" href= "tela_cadastroadm.html" >
+                <a class="botao_cadastro" href="tela_cadastro.html">Cadastro/Login</a>
+                </div>
+                 <div class="img-carrinho">
+                <img src="imgs/carrinho.png" alt="carrinho" type= button id="abrir-carrinho" onclick="exibirCarrinho()">
+                </div>
+
+
+
+        <!--Carrinho-->
+            <div class="carrinho" id="carrinho">
+                <div class="conteudo_carrinho">
+                    <div class="header_do_carrinho">
+                        <h1 class="titulo_do_carrinho" >Meu carrinho</h1>
+                            <button id="fechar-carrinho" onclick="fechar_carrinho()">&times</button>
+                        </div>
+                         <div class="produtos_dentro_do_carrinho">
+                         <ul id="listaCarrinho"></ul>
+                    </div>        
+                    </div>
+            </div>
+
+        </nav>
     
     <div class="produtos">
         <div class="flex-btn-title">
@@ -20,5 +67,6 @@
     </div>
     </div>
     <script src="telaInicio.js"></script>
+    <script src="carrinho.js"></script>
 </body>
 </html>

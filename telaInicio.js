@@ -30,10 +30,12 @@ function Continuar(){
         alert('Senha ou email errado, tente novamente')
     }
 }
-    
+
 
 
 // chama o produto
+
+
 function exibirProdutos(){
     const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
 
@@ -62,27 +64,94 @@ function exibirProdutos(){
         condicao.innerHTML = ` ${produto.condicao}`;
         condicao.classList.add('condicao-produto')
 
+        const addToCartBtn = document.createElement('button');
+        addToCartBtn.textContent = 'Adicionar ao carrinho';
+        addToCartBtn.classList.add('add-to-cart-btn');
+        addToCartBtn.onclick = () => adicionarNoCarrinho(produto);
+
+
         li.appendChild(img);
         li.appendChild(nome);
         li.appendChild(valor);
         li.appendChild(condicao);
+        li.appendChild(addToCartBtn)
         listaProdutos.appendChild(li);
     }
 
 }
 
 
+function adicionarNoCarrinho(produto){
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const produtoExistente = carrinho.find(p => p.nome === produto.nome);
 
-// por algum motivo essa função não esta rodando por inteiro quando ocorre o window.onload 
-window.onload = mostrarprodutos;
-// por algum motivo a função exibirProdutos roda, mas não roda a segunda linha que é a de exibirDestaques, acredito que seja porque alguma coisa que é chamada na primeira função tem que ser limpa para que a sefunda possa ocorrer, mas não sei oque 
-function mostrarprodutos(){
-    
-    // exibirDestaques();
-    exibirProdutos();
+    if(produtoExistente){
+        alert('Parece que você já adicionou esse produto ao seu carrinho')
+    }
+
+    else{
+        carrinho.push(produto);
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        alert('Produto adicionado com sucesso! Verfique no seu carrinho');
+    }
 }
 
-  p.innerHTML = produtos[0].nome
+function exibirDestaques(){
+    const listaDestaques = document.getElementById('listaDestaques');
+    if (!listaDestaques) {
+        console.error("Elemento 'listaProdutos' não encontrado.");
+        return;
+    }
+
+    const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+    listaDestaques.innerHTML = '';
+
+    const produtosDestaque = produtos.filter(produto => produto.destaque);
+
+    for(let produto of produtosDestaque){
+        const li = document.createElement ('li')
+        li.classList.add('destaque-item');
+
+        const img = document.createElement('img')
+        img.src = produto.url_img;
+        img.alt = produto.nome;
+        img.classList.add('destaque-img')
+
+        const nome= document.createElement('p')
+        nome.textContent = produto.nome;
+        nome.classList.add('nome-destaque')
+
+        const valor = document.createElement('p');
+        valor.innerHTML =  `R$${produto.valor}`;
+        valor.classList.add('valor-destaque')
+        
+        const condicao = document.createElement('p');
+        condicao.innerHTML = ` ${produto.condicao}`;
+        condicao.classList.add('condicao-destaque')
+
+        const addToCartBtn = document.createElement('button');
+        addToCartBtn.textContent = 'Adicionar ao carrinho';
+        addToCartBtn.classList.add('add-to-cart-btn');
+        addToCartBtn.onclick = () => adicionarNoCarrinho(produto);
 
 
+        li.appendChild(img);
+        li.appendChild(nome);
+        li.appendChild(valor);
+        li.appendChild(condicao);
+        li.appendChild(addToCartBtn)
+        listaDestaques.appendChild(li);
+    }
 
+}
+
+
+// function mostrarprodutos() {
+//     exibirProdutos();  
+//     exibirDestaques(); 
+// }
+window.onload = () => {
+    exibirDestaques();
+    exibirProdutos();
+    
+};

@@ -100,6 +100,7 @@ function FecharTermos(){
 
 let salvarItem = document.getElementById('salvarItem')
 let excluirItem = document.getElementById('excluirItem')
+let produtoEditandoIndex = null;
 
 function salvarnovoItem(){
   
@@ -125,22 +126,25 @@ function salvarnovoItem(){
     if (produto.nome && produto.autor && produto.condicao  && produto.url_img && produto.valor && produto.data) {
         let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
         produtos.push(produto);
-        // const chave = `produto_${Date.now()}`;
-        localStorage.setItem('produtos', JSON.stringify(produtos));
-    
-        
        
-        limparFormulario()
+    if (produtoEditandoIndex !== null) {
+        produtos[produtoEditandoIndex] = produto;
+        produtoEditandoIndex = null;
+    }
+    else{
+        produtos.push(produto);
+    }
 
+        localStorage.setItem('produtos', JSON.stringify(produtos));
+        limparFormulario()
         exibirProdutos()
     }
     
     else {
         alert('Preencha todos os campos para cadastrar o produto!');
     }
-
-
 }
+
 function limparFormulario(){
     document.getElementById('nome').value = '';
     document.getElementById('autor').value = '';
@@ -167,27 +171,35 @@ function exibirProdutos() {
         img.style.width ='100px';
         img.style.height ='auto';
 
-        li.textContent = `${produto.nome} - ${produto.condicao} - -R$${produto.valor}` ;
+        li.textContent = `${produto.nome} - ${produto.condicao} - -R$${produto.valor}`
 
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Deletar';
         deleteBtn.classList.add('delete-btn');
         deleteBtn.onclick = () => deletarProduto(i);
     
-        // const destaquebtn = document.createElement('button');
-        // destaquebtn.textContent = 'Destaque';
-        // destaquebtn.classList.add('destaque-btn');
-        // destaquebtn.onclick = () => destacarProduto(i);
+        const destaquebtn = document.createElement('button');
+         destaquebtn.textContent = 'Destaque';
+         destaquebtn.classList.add('destaque-btn');
+         destaquebtn.onclick = () => destacarProduto(i);
 
-        // const deldestaquebtn = document.createElement('button');
-        // deldestaquebtn.textContent = 'Remover-destaque';
-        // deldestaquebtn.classList.add('deldestaque-btn');
-        // deldestaquebtn.onclick = () => tirarDestaque(i);
+        const deldestaquebtn = document.createElement('button');
+        deldestaquebtn.textContent = 'Remover-destaque';
+        deldestaquebtn.classList.add('deldestaque-btn');
+        deldestaquebtn.onclick = () => tirarDestaque(i);
+
+        const editBtn = document.createElement('button');
+        editBtn.textContent.context = 'Editar'
+        editBtn.classList.add('edit-btn');
+        editBtn.onclick = () => editarProduto(i);
+
+        
 
         li.appendChild(img);
         li.appendChild(deleteBtn);
-        // li.appendChild(destaquebtn);
-        // li.appendChild(deldestaquebtn);
+        li.appendChild(destaquebtn);
+        li.appendChild(deldestaquebtn);
+        li.appendChild(editBtn);
         listaProdutos.appendChild(li);
 
 
@@ -208,6 +220,40 @@ function limparProdutos() {
 }
 
 
+function destacarProduto(index){
+    let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+    produtos[index].destaque = true;
+    localStorage.setItem('produtos', JSON.stringify(produtos));
+    exibirProdutos()
+    console.log('Produto ${produtos[index].nome} agora é destaque:,' + produtos[index].destaque);
+}
 
+
+function tirarDestaque(index){
+
+    let produtos = JSON.parse(localStorage.getItem('produtos'));
+
+    if (produtos[index]) {
+        produtos[index].destaque = false;
+        localStorage.setItem('produtos', JSON.stringify(produtos));
+        exibirProdutos();
+    } 
+}
+
+function editarProduto(index){
+    let produtos = JSON.parse(localStorage.getItem('produtos'));
+    const produto = produtos[index];
+
+    document.getElementById('nome').value = produto.nome;
+    document.getElementById('autor').value = produto.autor;
+    document.getElementById('condicoes').value = produto.condicao;
+    document.getElementById('data').value = produto.data;
+    document.getElementById('valor').value = produto.valor;
+    document.getElementById('descricao').value = produto.descricao;
+    document.getElementById('img').value = produto.url_img;
+
+    produtoEditandoIndex = index;
+}
 
 window.onload = exibirProdutos;
+
