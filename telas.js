@@ -125,7 +125,6 @@ function salvarnovoItem(){
 
     if (produto.nome && produto.autor && produto.condicao  && produto.url_img && produto.valor && produto.data) {
         let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-        produtos.push(produto);
        
     if (produtoEditandoIndex !== null) {
         produtos[produtoEditandoIndex] = produto;
@@ -164,6 +163,7 @@ function exibirProdutos() {
     for (let i in produtos) {
         const produto = produtos[i];
         const li = document.createElement('li');
+        li.classList.add('lista-produtos-container')
 
         const img = document.createElement('img');
         img.src = produto.url_img;
@@ -189,7 +189,7 @@ function exibirProdutos() {
         deldestaquebtn.onclick = () => tirarDestaque(i);
 
         const editBtn = document.createElement('button');
-        editBtn.textContent.context = 'Editar'
+        editBtn.textContent = 'Editar'
         editBtn.classList.add('edit-btn');
         editBtn.onclick = () => editarProduto(i);
 
@@ -254,6 +254,4 @@ function editarProduto(index){
 
     produtoEditandoIndex = index;
 }
-
-window.onload = exibirProdutos;
 

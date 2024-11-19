@@ -34,7 +34,7 @@ html{
     
 a {
     text-decoration: none;
-    display: inline;
+    display: flex;
     padding: 4px;
     color: #E6C17D;
     font-size:23px;
@@ -61,18 +61,12 @@ nav{
     color: rgba(255, 255, 255, 0.705);
 }
 
-
-
 textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
     /* faz que quando, o input de pesquisar for clicado,
      continue sem nenhuma borda de seleção */
 }
-
-
-
-
 
 .botao_cadastro{
     text-decoration: none;
@@ -235,6 +229,8 @@ textarea:focus, input:focus {
     font-size: 15px;
     color: #000000;
     font-family: "Libre Baskerville", serif;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .produto-img {
@@ -263,23 +259,19 @@ textarea:focus, input:focus {
     padding: 50px;
     margin: 20px;
     list-style-type: none;
-
 }
 
 #catalogo-para-inicio{
-    margin: 20px;
-    width: 150px;
+  
+    width: fit-content;
     height: 40px;
-    font-size: 18px; 
-    padding: 8px; 
-    background-color: hsl(0, 61%, 25%);
-    color: #c7c7c7; 
+    font-size: 80px;
+    padding: 8px;
+    background-color: transparent;
+    color: #ffffff;
     border: none;
     border-radius: 20px;
-    font-family: "Open Sans", sans-serif; 
-    text-decoration: none;
-    padding-bottom: 1px;
-    margin-top: 40px;
+    font-family: "Open Sans", sans-serif;
   
 }
 
@@ -287,3 +279,96 @@ textarea:focus, input:focus {
     display: flex;
 }
 
+.produtos_dentro_do_carrinho{
+    padding: 20px;
+}
+
+
+.carrinho-vazio-texto{
+    font-size: 23px;
+    margin: 10px;
+    font-family: "Libre Baskerville", serif;
+    font: bolder;
+}
+
+.add-to-cart-btn{
+    background-color: transparent;
+    border: none;
+    color: #C96D1C;
+    font:bolder;
+    font-size: 20px;
+}
+
+#listaCarrinho{
+    display: flex;
+    /* margin: 20px; */
+    margin-right: 25px;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.li-carrinho{
+    display: flex;
+    background-color: #E6C17D;
+    border: none;
+    border-radius: 20px;
+    width: 350px;
+    height: fit-content;
+    margin: 20px;
+    padding: 5px;
+    list-style-type: none;
+    justify-content:left;
+    align-items: center;
+    gap: 10px;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.carrinho-nome{
+    font-family: "Libre Baskerville", serif;
+    font-size: 25px;
+    font: bolder;
+}
+
+.carrinho-valor{
+    font-family: "Libre Baskerville", serif;
+    font-size: 20px;
+    font: bolder;
+}
+
+.carrinho-condicao{
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
+    font: bolder; 
+}
+
+.carrinho-img-produto{
+    border-radius: 5px;
+}
+
+.btn-remove-cart {
+    background: none; 
+    border: none;
+    padding: 5px;
+    padding-bottom: 75px;
+    /* padding-left: 80px; */
+    display: flex; 
+    justify-content: flex-end;
+    border-radius: 5px;
+    
+}
+
+.btn-remove-cart:hover {
+    transform: scale(1.08);
+}
+
+/* Estilo da imagem dentro do botão */
+.btn-remove-icon {
+    width: 25px; 
+    height: 25px;
+    object-fit: contain; 
+    margin-bottom: 80%;
+  
+}

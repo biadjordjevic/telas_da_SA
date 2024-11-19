@@ -65,7 +65,7 @@ function exibirProdutos(){
         condicao.classList.add('condicao-produto')
 
         const addToCartBtn = document.createElement('button');
-        addToCartBtn.textContent = 'Adicionar ao carrinho';
+        addToCartBtn.textContent = '+ ao carrinho';
         addToCartBtn.classList.add('add-to-cart-btn');
         addToCartBtn.onclick = () => adicionarNoCarrinho(produto);
 
@@ -109,15 +109,16 @@ function exibirDestaques(){
     const produtosDestaque = produtos.filter(produto => produto.destaque);
 
     for(let produto of produtosDestaque){
-        const li = document.createElement ('li')
+
+        const li = document.createElement ('li');
         li.classList.add('destaque-item');
 
-        const img = document.createElement('img')
+        const img = document.createElement('img');
         img.src = produto.url_img;
         img.alt = produto.nome;
         img.classList.add('destaque-img')
 
-        const nome= document.createElement('p')
+        const nome= document.createElement('p');
         nome.textContent = produto.nome;
         nome.classList.add('nome-destaque')
 
@@ -130,11 +131,9 @@ function exibirDestaques(){
         condicao.classList.add('condicao-destaque')
 
         const addToCartBtn = document.createElement('button');
-        addToCartBtn.textContent = 'Adicionar ao carrinho';
+        addToCartBtn.textContent = '+ ao carrinho';
         addToCartBtn.classList.add('add-to-cart-btn');
         addToCartBtn.onclick = () => adicionarNoCarrinho(produto);
-
-
         li.appendChild(img);
         li.appendChild(nome);
         li.appendChild(valor);

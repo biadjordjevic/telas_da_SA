@@ -1,6 +1,5 @@
 *{
     margin: 0;
-
 }
 
 body{
@@ -14,7 +13,6 @@ body{
     background-position: center;  */
     height: 100vh;
     color: #ffffff;
-
 }
 
 
@@ -24,7 +22,6 @@ header{
     background-color:  hsl(0, 61%, 25%);
     padding: 13px;
     margin:auto;
-
 }
 
 .flex{
@@ -33,26 +30,18 @@ header{
     flex-direction: row;
     margin-bottom: 1%;
     margin-top: 1%;
-
 }
-
-
 
 head{
     align-content: center;
     text-align: center;
-
-
 }
 
 .cadastro-livros-header{
     margin-right: 60%;
     padding: 15px;
-    color: #FFEFD2;
-    
+    color: #FFEFD2;  
 }
-
-
 
 /* aparencia dos inputs */  
 
@@ -63,13 +52,10 @@ head{
     flex-direction: column;
     margin-left: 5%;
     margin-top: 20px;
-    /* flex-flow: column wrap; */
     flex-wrap: wrap;
     column-gap: 20px;
     height: 520px;
     width: 40%;
-    
-    
 }
 
 textarea:focus, input:focus {
@@ -88,17 +74,10 @@ textarea:focus, input:focus {
     margin-bottom: 15px;
     width: auto;   
     font-size: 15px;    
-    color:#FFEFD2;
+    color:#929292;
     margin-top: 10px;
-
 }
- /* .input-dados2{
-    display: flex;
-    flex-direction: column;
-    margin-left: 28%;
-    
-
-} */
+ 
 .input-dados-descricao{
 background-color: transparent;
 border: 1px solid #FFEFD2;
@@ -111,6 +90,7 @@ width: 35%;
 font-size: 15px;    
 color:#FFEFD2
 } 
+
 #excluirItem{
     margin: 20px;
     width: 150px;
@@ -125,8 +105,6 @@ color:#FFEFD2
 }
 
 #voltar{
- 
-      
         width: 150px;
         height: 40px;
         font-size: 40px; 
@@ -136,7 +114,6 @@ color:#FFEFD2
         border: none;
         border-radius: 20px;
         font-family: "Open Sans", sans-serif;
-    
 }
 
 #salvarItem{
@@ -158,7 +135,7 @@ display: flex;
 }
 
 .delete-btn{
-    margin: 20px;
+    margin: 10px;
     width: 150px;
     height: 40px;
     font-size: 15px; 
@@ -168,4 +145,57 @@ display: flex;
     border: none;
     border-radius: 20px;
     font-family: "Open Sans", sans-serif; 
+}
+
+.destaque-btn{
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px; 
+    padding: 8px; 
+    background-color: hsla(0, 61%, 25%, 0.795);
+    color: #c7c7c7; 
+    border: none;
+    border-radius: 20px;
+    font-family: "Open Sans", sans-serif; 
+}
+
+.deldestaque-btn{
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px; 
+    padding: 8px; 
+    background-color: hsla(0, 61%, 25%, 0.795);
+    color: #c7c7c7; 
+    border: none;
+    border-radius: 20px;
+    font-family: "Open Sans", sans-serif; 
+}
+
+.edit-btn{
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px; 
+    padding: 8px; 
+    background-color: hsla(0, 61%, 25%, 0.795);
+    color: #c7c7c7; 
+    border: none;
+    border-radius: 20px;
+    font-family: "Open Sans", sans-serif; 
+}
+
+.lista-produtos-container img{
+    display: flex;
+}
+
+.lista-produtos-container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
+    width: 900px;
+    border: none;
+    border-bottom: 1px solid gray;
+    list-style-type: none;
 }
