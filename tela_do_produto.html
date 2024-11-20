@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tela_do_produto.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <!-- header -->
+  <div id="menu" class="header">
+    <!-- menu  -->
+
+    <nav>
+        <ul class="menu-ul-li">
+            <li class="Menu-title">Menu</li>
+            <li> 
+                <a href= "#sobre">|  A farsa da boa preguiça &#8595;</a> 
+            </li>
+            <!-- <div  class="img-login-centralizar"> -->
+                <!-- <img src="imgs/cadastro-img.png" alt="img-pessoa" id="img-cadastro"> -->
+            <li> 
+                <a href= "tela_cadastroadm.html">|  Adicione mais livros clicando no aqui</a> 
+            </li>
+            <li>
+                <a href="tela_catalogo.html">|  Ver todos os livros</a>
+            </li>
+            <!-- </div> -->
+            </ul>
+            <div class="img-lupa-centralizar" style="display: flex;">
+            <img src="imgs/lupa.png" alt="lupa" id="lupa-img">
+            <input class= search-container type = "text" name = "search" placeholder = "Procure pelo nome de uma obra, autor ou gênero..."> 
+             </div>
+        <!-- por algum motivo essa imagem ta acima de todas as outras, tem que encontraroque ta causando isso e passar o style do dysplay p/ css  -->
+             <div class="img-perfil" style="display: flex;">
+            <img src="imgs/cadastro-img.png" alt="perfil" type= button id="abrir-carrinho" href= "tela_cadastroadm.html" >
+            <a class="botao_cadastro" href="tela_cadastro.html">Cadastro/Login</a>
+            </div>
+             <div class="img-carrinho">
+            <img src="imgs/carrinho.png" alt="carrinho" type= button id="abrir-carrinho" onclick=" exibirCarrinho()">
+            </div>
+
+
+
+    <!--Carrinho-->
+        <div class="carrinho" id="carrinho">
+            <div class="conteudo_carrinho">
+                <div class="header_do_carrinho">
+                    <h1 class="titulo_do_carrinho" >Meu carrinho</h1>
+                        <button id="fechar-carrinho" onclick="fechar_carrinho()">&times</button>
+                    </div>
+                     <div class="produtos_dentro_do_carrinho">
+                     <ul id="listaCarrinho"></ul>
+                </div>        
+                </div>
+        </div>
+
+    </nav>
+
+<div class="container">
+
+    <!-- <ul id="produtoDetalhes"></ul> -->
+
+
+    <div id="detalhesProduto">
+        <div class="container-img">
+            <img id="produtoImagem" alt="Imagem do Produto">
+        </div>
+        <div class="produtos-dados">
+            <h1 id="produtoNome"></h1>
+            <p id="produtoAutor"></p>
+            <p id="produtoCondicao"></p>
+            <p id="produtoData"></p>
+            <p id="produtoValor"></p>
+            <p id="produtoDescricao"></p>
+            <div id="container-button"></div>
+            <button id="para-pagamento">Comprar agora</button>
+        </div>
+    </div>
+    </div>
+    <script src="tela_do_produto.js"></script>
+    <script src="telas.js"></script>
+    <script src="carrinho.js"></script>
+</body>
+</html>

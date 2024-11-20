@@ -74,7 +74,10 @@ function exibirProdutos(){
         li.appendChild(nome);
         li.appendChild(valor);
         li.appendChild(condicao);
-        li.appendChild(addToCartBtn)
+        li.appendChild(addToCartBtn);
+        li.addEventListener('click', () => {
+            localStorage.setItem('produtoclicado', JSON.stringify(produto));
+            window.location.href = 'tela_do_produto.html'; });
         listaProdutos.appendChild(li);
     }
 
@@ -95,6 +98,8 @@ function adicionarNoCarrinho(produto){
         alert('Produto adicionado com sucesso! Verfique no seu carrinho');
     }
 }
+
+// produto do destaque
 
 function exibirDestaques(){
     const listaDestaques = document.getElementById('listaDestaques');
@@ -151,6 +156,5 @@ function exibirDestaques(){
 // }
 window.onload = () => {
     exibirDestaques();
-    exibirProdutos();
-    
+    exibirProdutos();   
 };
