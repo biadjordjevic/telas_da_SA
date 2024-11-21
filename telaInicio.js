@@ -3,13 +3,16 @@
 var carrinho = document.getElementById('carrinho');
 function abr_carrinho(){
     carrinho.style.display = "block"
+    document.body.style.overflow = "hidden";
 }
 function fechar_carrinho(){
     carrinho.style.display = "none"
+    document.body.style.overflow = "auto";
 }
 window.onclick = function fechar_carrinho_jnl(event){
     if(event.target === carrinho){
         carrinho.style.display = "none"
+        document.body.style.overflow = "auto";
     }
 }
 
