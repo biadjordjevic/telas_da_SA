@@ -255,3 +255,8 @@ function editarProduto(index){
     produtoEditandoIndex = index;
 }
 
+window.onload = () =>{
+    exibirProdutos()
+} 
+
+

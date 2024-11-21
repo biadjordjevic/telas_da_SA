@@ -8,7 +8,7 @@ function exibirCarrinho(){
 
     if(carrinho.length === 0){
         listaCarrinho.innerHTML = 
-    '<p class="carrinho-vazio-texto"> Se carrinho está vázio </p>';
+    '<p class="carrinho-vazio-texto"> Seu carrinho está vázio </p>';
     return;
 }
 

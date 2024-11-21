@@ -1,11 +1,12 @@
 window.onload = () => {
-
+    let total = 0
     const produto = JSON.parse(localStorage.getItem('produtoclicado'));
     const carrinho = JSON.parse(localStorage.getItem('carrinhoFinalizado')) || [];
   
         const listaPagamento = document.getElementById('listaPagamento')
         listaPagamento.innerHTML = ''
-
+      
+        
         if (produto){
 
             const itemPagamento = document.createElement("li");
@@ -84,9 +85,22 @@ window.onload = () => {
             listaPagamento.appendChild(itemPagamento);
             });
         }
+     if (produto) {
+        total += Number(produto.valor); // Converte o valor para número e soma
+    }
+
+    carrinho.forEach(produto => {
+        total += Number(produto.valor); // Converte o valor para número e soma
+    });
+
+    // return `R$${total.toFixed(2)}`; // Retorna o total formatado em moeda
+    ;
     
-      
+    // }
+        document.getElementById('valorPagar').textContent = `R$${total.toFixed(2) }`;
+    
 }
+
 
 const removerDaCompra = (index, isCarrinho = false) => {
     if (isCarrinho) {
@@ -98,5 +112,4 @@ const removerDaCompra = (index, isCarrinho = false) => {
         localStorage.removeItem('produtoclicado');
     }
 }
-    
-
+// só armazena em uma tag html e mostra pelo inne html, igual na listaPagamento
