@@ -364,11 +364,23 @@ textarea:focus, input:focus {
     transform: scale(1.08);
 }
 
-/* Estilo da imagem dentro do botão */
+
 .btn-remove-icon {
     width: 25px; 
     height: 25px;
     object-fit: contain; 
     margin-bottom: 80%;
-  
+}
+
+#finalizarCompra{
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #681919;
+    color: #FFEFD2;
+    border: none;
+    border-radius: 15px;
+    font-family: "Open Sans", sans-serif;
 }

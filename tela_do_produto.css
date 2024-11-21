@@ -240,7 +240,6 @@ textarea:focus, input:focus {
     border: none;
     padding: 5px;
     padding-bottom: 75px;
-    /* padding-left: 80px; */
     display: flex; 
     justify-content: flex-end;
     border-radius: 5px;
@@ -261,18 +260,18 @@ textarea:focus, input:focus {
 }
 
  .container{
-    background-color: #ffffff;
-    width: 100%;
+    background-color: #ffefd2d3;
+    width: fit-content;
     height: auto;
-    padding: 30px;
-    margin: 30px;
+    padding: 50px;
     border: none;
-    border-radius: 40px;
+    border-radius: 11px;
+    margin: 0 auto;
+   
 } 
 
-
     #produtoImagem {
-    height: 400px;
+    height: 600px;
     width: fit-content;
     border: 2px solid #1f232656 ;
     border-radius: 20px;
@@ -286,6 +285,7 @@ textarea:focus, input:focus {
   .add-to-cart-btn{
     margin-top: 5px;
     font-size: 20px;
+    font-weight: 600;
   }
 
  #para-pagamento{
@@ -294,8 +294,8 @@ textarea:focus, input:focus {
     height: 40px;
     font-size: 20px;
     padding: 10px;
-    background-color: #E6C17D;
-    color: black;
+    background-color: #681919;
+    color:  #FFEFD2;
     border: none;
     border-radius: 15px;
     font-family: "Open Sans", sans-serif;
@@ -303,6 +303,75 @@ textarea:focus, input:focus {
  }
 
  .produtos-dados{
-  margin-top: 50px;
-
+  margin-top: 80px;
  }
+
+ .secao-produto{
+    border: 1px red;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background-color:#1f2326 ;
+ }
+
+ #produtoNome{
+    font-size: 40px;
+    color: #681919;
+}
+
+#produtoAutor{
+    font-size: 25px;
+    color: #1f2326;
+    padding-bottom: 10px;
+ }
+
+ #produtoCondicao{
+    font-size: 15px;
+    color: #1f2326;
+}
+
+#produtoData{
+    font-size: 15px;
+    color: #1f2326;
+    margin-right: 70%;
+}
+
+#produtoDescricao{
+    font-size: 15px;
+    color: #1f2326;
+}
+
+#produtoValor{
+    padding-top: 10px;
+    font-size: 30px;
+    color: #681919;
+    font-weight:700;
+}
+
+#produto-para-inicio{
+
+    width: fit-content;
+    height: 40px;
+    font-size: 50px;
+    padding: 8px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-family: "Open Sans", sans-serif;
+    padding: 20px;
+  
+}
+
+#finalizarCompra{
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #681919;
+    color: #FFEFD2;
+    border: none;
+    border-radius: 15px;
+    font-family: "Open Sans", sans-serif;
+}

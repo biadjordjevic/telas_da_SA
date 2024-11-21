@@ -53,7 +53,20 @@ for (let i in carrinho){
     imgRemove.classList.add('btn-remove-icon'); 
     
     removeBtn.onclick = () => removerDoCarrinho(i);
-    
+
+    const finalizar = document.getElementById('finalizarCompra');
+    finalizar.addEventListener('click', () => {
+        const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    if (carrinho.length > 0) {
+        localStorage.setItem('carrinhoFinalizado', JSON.stringify(carrinho));
+        window.location.href = 'tela_pagamento.html';
+    }
+    else{
+        alert("seu carrinho está vazio")
+    }
+
+});
+
     li.appendChild(img);
     li.appendChild(textoDiv); 
     li.appendChild(removeBtn);
@@ -61,7 +74,6 @@ for (let i in carrinho){
     textoDiv.appendChild(nome);
     textoDiv.appendChild(valor);
     textoDiv.appendChild(condicao);
-    // listaCarrinho.appendChild(divbox);
     listaCarrinho.appendChild(li);
 }
 
@@ -74,7 +86,5 @@ function removerDoCarrinho(index){
     
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     exibirCarrinho()
-    
-    // li.textContent = `${produto.nome} - R$${produto.valor} - ${produto.condicao}`;
-    
+        
 }

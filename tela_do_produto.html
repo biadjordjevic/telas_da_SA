@@ -16,7 +16,7 @@
         <ul class="menu-ul-li">
             <li class="Menu-title">Menu</li>
             <li> 
-                <a href= "#sobre">|  A farsa da boa preguiça &#8595;</a> 
+                <a href= "tela_inicio.html">|  A farsa da boa preguiça</a> 
             </li>
             <!-- <div  class="img-login-centralizar"> -->
                 <!-- <img src="imgs/cadastro-img.png" alt="img-pessoa" id="img-cadastro"> -->
@@ -49,35 +49,38 @@
                 <div class="header_do_carrinho">
                     <h1 class="titulo_do_carrinho" >Meu carrinho</h1>
                         <button id="fechar-carrinho" onclick="fechar_carrinho()">&times</button>
-                    </div>
-                     <div class="produtos_dentro_do_carrinho">
-                     <ul id="listaCarrinho"></ul>
-                </div>        
-                </div>
+                       </div>
+                          <div class="produtos_dentro_do_carrinho">
+                   <ul id="listaCarrinho"></ul>
+                </div> 
+                <button id="finalizarCompra">Finalizar Compra</button>       
+            </div>
         </div>
 
     </nav>
 
-<div class="container">
-
+    
     <!-- <ul id="produtoDetalhes"></ul> -->
-
-
-    <div id="detalhesProduto">
-        <div class="container-img">
-            <img id="produtoImagem" alt="Imagem do Produto">
+    
+    <div class="secao-produto">
+        <a  id="produto-para-inicio" href="tela_inicio.html">&#8592;</a>
+        <div class="container">
+        <div id="detalhesProduto">
+            <div class="container-img">
+                <img id="produtoImagem" alt="Imagem do Produto">
+            </div>
+            <div class="produtos-dados">
+                <h1 id="produtoNome"></h1>
+                <p id="produtoAutor"></p>
+                <p id="produtoCondicao"></p>
+                <p id="produtoData"></p>
+                <p id="produtoDescricao"></p>
+                <p id="produtoValor"></p>
+                <div id="container-button"></div>
+                <button id="para-pagamento">Comprar agora</button>
+            </div>
         </div>
-        <div class="produtos-dados">
-            <h1 id="produtoNome"></h1>
-            <p id="produtoAutor"></p>
-            <p id="produtoCondicao"></p>
-            <p id="produtoData"></p>
-            <p id="produtoValor"></p>
-            <p id="produtoDescricao"></p>
-            <div id="container-button"></div>
-            <button id="para-pagamento">Comprar agora</button>
         </div>
-    </div>
     </div>
     <script src="tela_do_produto.js"></script>
     <script src="telas.js"></script>

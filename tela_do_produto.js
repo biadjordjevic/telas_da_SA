@@ -1,61 +1,13 @@
-// window.onload = () => {
-//     const produto = JSON.parse(localStorage.getItem('produtoclicado'));
-//     const listaDetalhes = document.getElementById('produtoDetalhes');
-
-//     const li = document.createElement('li');
-//     li.classList.add('produto-item');
-
-//     const img = document.createElement('img');
-//     img.src = produto.url_img;
-//     img.style.margin = '10px';
-//     img.style.width = '80px';
-//     img.style.height = 'auto';
-//     img.classList.add('carrinho-img-produto');
-
-//     const textoDiv = document.createElement('div');
-//     textoDiv.classList.add('texto-carrinho');
-
-//     const nome = document.createElement('p');
-//     nome.textContent = produto.nome;
-//     nome.classList.add('carrinho-nome');
-
-//     const autor = document.createElement('p');
-//     nome.textContent = produto.autor;
-//     nome.classList.add('autor')
-
-
-
-//     const valor = document.createElement('p');
-//     valor.textContent = `R$${produto.valor}`;
-//     valor.classList.add('carrinho-valor');
-
-//     const condicao = document.createElement('p');
-//     condicao.textContent = produto.condicao;
-//     condicao.classList.add('carrinho-condicao');
-
-//     // Montando a estrutura
-//     li.appendChild(img);
-//     textoDiv.appendChild(nome);
-//     textoDiv.appendChild(autor);
-//     textoDiv.appendChild(valor);
-//     textoDiv.appendChild(condicao);
-//     li.appendChild(textoDiv);
-
-//     // Adicionando o 'li' ao contêiner
-//     listaDetalhes.appendChild(li);
-// };
-
-
 
 window.onload = () => {
     const produto = JSON.parse(localStorage.getItem('produtoclicado'));
 
     document.getElementById('produtoImagem').src = produto.url_img;
     document.getElementById('produtoNome').textContent = produto.nome;
-    document.getElementById('produtoAutor').textContent = `Autor: ${produto.autor}`;
+    document.getElementById('produtoAutor').textContent = `${produto.autor}`;
     document.getElementById('produtoCondicao').textContent = `Condição: ${produto.condicao}`;
-    document.getElementById('produtoData').textContent = `Data: ${produto.data}`;
-    document.getElementById('produtoValor').textContent = `Valor: R$${produto.valor}`;
+    document.getElementById('produtoData').textContent = `Data de publicação do anúncio: ${produto.data}`;
+    document.getElementById('produtoValor').textContent = `R$${produto.valor}`;
     document.getElementById('produtoDescricao').textContent = `Descrição: ${produto.descricao}`;
    const containerBtn = document.getElementById('container-button')
     const addToCartBtn = document.createElement('button');
@@ -63,6 +15,12 @@ window.onload = () => {
     addToCartBtn.classList.add('add-to-cart-btn');
     addToCartBtn.onclick = () => adicionarNoCarrinho(produto);
     containerBtn.appendChild(addToCartBtn);
+
+    const btnPagar = document.getElementById('para-pagamento')
+    btnPagar.addEventListener('click', () => {
+        localStorage.setItem('produtoclicado', JSON.stringify(produto));
+        console.log('Produto armazenado no localStorage:', produto);
+        window.location.href = 'tela_pagamento.html'; });
 
 };
 
@@ -89,3 +47,6 @@ function adicionarNoCarrinho(produto){
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
         alert('Produto adicionado com sucesso! Verfique no seu carrinho');
     }}
+
+
+  

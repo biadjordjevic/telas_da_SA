@@ -143,7 +143,10 @@ function exibirDestaques(){
         li.appendChild(nome);
         li.appendChild(valor);
         li.appendChild(condicao);
-        li.appendChild(addToCartBtn)
+        li.appendChild(addToCartBtn);
+        li.addEventListener('click', () => {
+            localStorage.setItem('produtoclicado', JSON.stringify(produto));
+            window.location.href = 'tela_do_produto.html'; });
         listaDestaques.appendChild(li);
     }
 

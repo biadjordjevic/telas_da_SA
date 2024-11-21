@@ -9,19 +9,19 @@ body{
     background-color: #1f2326;
     margin: 0;
     overflow-x: hidden;
-   overflow-y: auto;
-     background-image: url('imgs/background.png');
-     background-size:cover;
-     background-position: center; 
-     background-repeat: no-repeat; 
-     background-attachment: fixed; 
+    overflow-y: auto;
+    background-image: url('imgs/background.png');
+    background-size:contain;
+    background-position: right 50px; 
+    background-repeat: no-repeat; 
+    background-attachment:scroll; 
     height: 100vh;
     color: #333;
 
 }
 
 header{
-    height: 40px;
+       height: 70px;
     background-color:  hsl(0, 61%, 25%);
     padding: 13px;
     margin:auto;

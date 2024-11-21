@@ -9,10 +9,6 @@ body{
     margin: 0;
     overflow-x: hidden;
    overflow-y: hidden;
-    /* background-image: url('imgs/background2.png');
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    background-position: center;  */
     height: 100vh;
     color: #333; 
 }
@@ -151,8 +147,10 @@ ul li{
     text-decoration: none;
     padding: 8px;
     color: #FFEFD2;
-    font-size:20px;
+    font-size:27px;
     margin-top: 15px;
+    font-family: "Libre Baskerville", serif;
+
 }
     
 nav{
