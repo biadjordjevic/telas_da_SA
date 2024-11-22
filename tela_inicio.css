@@ -45,7 +45,8 @@ nav{
     border: none;
     border-bottom: 2px solid rgb(191, 189, 188);
     height: 30px;
-    width: 550px;
+    width: 400px;
+    padding-right: 5px;
     font-size: 20px;
     color: rgba(255, 255, 255, 0.705);
 }
@@ -154,7 +155,7 @@ textarea:focus, input:focus {
 }
 
 .destaque-item{
-    height: fit-content;
+    height:500px;
     width: 200px;
     padding: 20px;
     background-color: #D9D9D9;
@@ -167,7 +168,10 @@ textarea:focus, input:focus {
     word-break: break-word;
 }
 
-
+.destaque-item:hover {
+    transform: scale(1.05);
+   
+}
 .destaque-img{
     width: 100%;
     height: fit-content;
@@ -418,4 +422,14 @@ textarea:focus, input:focus {
     border: none;
     border-radius: 15px;
     font-family: "Open Sans", sans-serif;
+}
+
+#confetti{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    pointer-events: none;
 }

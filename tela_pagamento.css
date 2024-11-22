@@ -119,9 +119,12 @@ body{
 .valor-pagamento{
     font-size: 20px;
     padding-top: 5px;
-    
 }
 
 .nome-pagamento{
     font-size: 25px;
+}
+
+button:hover {
+    transform: scale(1.07); 
 }

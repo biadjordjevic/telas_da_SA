@@ -156,11 +156,10 @@ function exibirDestaques(){
 }
 
 
-// function mostrarprodutos() {
-//     exibirProdutos();  
-//     exibirDestaques(); 
-// }
+
 window.onload = () => {
     exibirDestaques();
     exibirProdutos();   
 };
+
+

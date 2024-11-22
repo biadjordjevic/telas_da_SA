@@ -107,9 +107,11 @@ const removerDaCompra = (index, isCarrinho = false) => {
         const carrinho = JSON.parse(localStorage.getItem('carrinhoFinalizado')) || [];
         carrinho.splice(index, 1);
         localStorage.setItem('carrinhoFinalizado', JSON.stringify(carrinho));
+        location.reload();
     }
      else {
         localStorage.removeItem('produtoclicado');
+        location.reload();
     }
 }
 // só armazena em uma tag html e mostra pelo inne html, igual na listaPagamento
