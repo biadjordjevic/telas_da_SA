@@ -17,9 +17,6 @@ for (let i in carrinho){
     
     const li = document.createElement('li')
     li.classList.add('li-carrinho')
-    
-    // const divbox = document.createElement('div');
-    // divbox.classList.add('box-carrinho');
 
     const img = document.createElement('img');
     img.src = produto.url_img

@@ -128,3 +128,13 @@ body{
 button:hover {
     transform: scale(1.07); 
 }
+
+#confetti{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    pointer-events: none;
+}

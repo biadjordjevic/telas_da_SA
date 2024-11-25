@@ -334,15 +334,13 @@ textarea:focus, input:focus {
     background-color: transparent;
     border: none;
     color: #C96D1C;
-    font:bolder;
+    font-weight: 700;
     font-size: 20px;
 }
 
 #listaCarrinho{
     display: flex;
-    /* margin: 20px; */
     margin-right: 25px;
-    /* justify-content: space-between; */
     flex-direction: column;
     align-items: center;
 }
@@ -391,7 +389,6 @@ textarea:focus, input:focus {
     border: none;
     padding: 5px;
     padding-bottom: 75px;
-    /* padding-left: 80px; */
     display: flex; 
     justify-content: flex-end;
     border-radius: 5px;
@@ -424,7 +421,16 @@ textarea:focus, input:focus {
     font-family: "Open Sans", sans-serif;
 }
 
-#confetti{
+.img-lupa-centralizar{
+    display: flex;
+}
+
+.img-perfil{
+    display: flex;
+    height: 50px;
+}
+
+/* #confetti{
     position: fixed;
     height: 100%;
     width: 100%;
@@ -432,4 +438,4 @@ textarea:focus, input:focus {
     left: 0px;
     z-index: 999;
     pointer-events: none;
-}
+} */

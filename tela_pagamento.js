@@ -92,13 +92,8 @@ window.onload = () => {
     carrinho.forEach(produto => {
         total += Number(produto.valor); // Converte o valor para número e soma
     });
-
-    // return `R$${total.toFixed(2)}`; // Retorna o total formatado em moeda
     ;
-    
-    // }
         document.getElementById('valorPagar').textContent = `R$${total.toFixed(2) }`;
-    
 }
 
 
@@ -114,4 +109,16 @@ const removerDaCompra = (index, isCarrinho = false) => {
         location.reload();
     }
 }
+
+const btnConfetti = document.getElementById('btnPagar')
+const jsConfetti = new JSConfetti
+
+
+btnConfetti.addEventListener('click', () => {
+    jsConfetti.addConfetti()
+    jsConfetti.addConfetti({
+        emojis: ['🦥', '✨', '📚', '☕️', '🎭', '🖋', '🎊', '🦥'],
+     })
+} )
+
 // só armazena em uma tag html e mostra pelo inne html, igual na listaPagamento

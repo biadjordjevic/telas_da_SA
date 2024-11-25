@@ -301,9 +301,7 @@ textarea:focus, input:focus {
 
 #listaCarrinho{
     display: flex;
-    /* margin: 20px; */
     margin-right: 25px;
-    /* justify-content: space-between; */
     flex-direction: column;
     align-items: center;
 }
@@ -353,7 +351,6 @@ textarea:focus, input:focus {
     border: none;
     padding: 5px;
     padding-bottom: 75px;
-    /* padding-left: 80px; */
     display: flex; 
     justify-content: flex-end;
     border-radius: 5px;
@@ -383,4 +380,13 @@ textarea:focus, input:focus {
     border: none;
     border-radius: 15px;
     font-family: "Open Sans", sans-serif;
+}
+
+.img-lupa-centralizar{
+    display: flex;
+}
+
+.img-perfil{
+    display: flex;
+    height: 50px;
 }

@@ -21,7 +21,7 @@ html{
 
 .header{
     background-color: #681919;
-    height: 150px;
+    height: auto;
 }
 .menu-ul-li{
     display:flex;
@@ -62,8 +62,6 @@ nav{
 textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
-    /* faz que quando, o input de pesquisar for clicado,
-     continue sem nenhuma borda de seleção */
 }
 
 .botao_cadastro{
@@ -188,9 +186,7 @@ textarea:focus, input:focus {
 
 #listaCarrinho{
     display: flex;
-    /* margin: 20px; */
     margin-right: 25px;
-    /* justify-content: space-between; */
     flex-direction: column;
     align-items: center;
 }
@@ -374,4 +370,13 @@ textarea:focus, input:focus {
     border: none;
     border-radius: 15px;
     font-family: "Open Sans", sans-serif;
+}
+
+.img-lupa-centralizar{
+    display: flex;
+}
+
+.img-perfil{
+    display: flex;
+    height: 50px;
 }
