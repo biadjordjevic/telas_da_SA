@@ -2,6 +2,15 @@
 <p>Projeto de um sistema de gerenciamento de produtos com autenticação de usuários. Esse sistema deveria ser desenvolvido em cima de um website temático, da escolha do grupo, que em questão foi uma livraria online  </p>
 
 ---
+# Guia de arquivos 🔎📁
+
+ - Cadastro-login: arquivos HTML, CSS e Js de páginas para o registro do usuário;
+ - inicio-telas: todos os arquivos que partem da tela de início e são do acesso do usuário;
+ - adm-telas: arquivos das funções dos administradores do site;
+ - imgs e fontes: imagens e fontes usadas;
+
+
+---
    
 # Objetivo geral📌
 <p> Desenvolver  (utilizando HTML, CSS e JavaScript) um sistema de gerenciamento de produtos que permita aos usuários cadastrar, editar e excluir produtos. 
