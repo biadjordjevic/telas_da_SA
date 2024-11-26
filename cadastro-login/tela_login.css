@@ -10,13 +10,14 @@ body{
     margin: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    background-image: url('imgs/background.png');
+    background-image: url('/imgs/background.png');
     background-size:contain;
     background-position: right 50px; 
     background-repeat: no-repeat; 
     background-attachment:scroll; 
     height: 100vh;
     color: #333;
+   
 
 }
 
@@ -108,7 +109,7 @@ textarea:focus, input:focus {
 h1{
     color: hsl(0, 0%, 100%);
     font-size: 45px;
-    font-family: "Libre Baskerville", serif;
+    font-family: "/fontes/Libre Baskerville", serif;
     font-weight: 400;
 
 }

@@ -295,7 +295,7 @@ textarea:focus, input:focus {
     background-color: transparent;
     border: none;
     color: #C96D1C;
-    font:bolder;
+    font-weight: 700;
     font-size: 20px;
 }
 

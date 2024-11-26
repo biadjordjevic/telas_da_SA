@@ -5,6 +5,8 @@
 body{
     background-color: #1f2326 ;
     overflow-x: hidden;
+    font-family: "Libre Baskerville", serif ;
+    src: url(/fontes/LibreBaskerville-Regular.ttf);
 }
 
 html{

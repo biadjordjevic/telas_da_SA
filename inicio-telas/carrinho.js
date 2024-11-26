@@ -45,7 +45,7 @@ for (let i in carrinho){
     removeBtn.classList.add('btn-remove-cart');
 
     const imgRemove = document.createElement('img');
-    imgRemove.src =  ("./imgs/Lixeira-icon.png");
+    imgRemove.src =  ("../imgs/Lixeira-icon.png");
     imgRemove.alt = 'Remover';
     imgRemove.classList.add('btn-remove-icon'); 
     

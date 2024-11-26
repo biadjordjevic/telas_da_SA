@@ -44,7 +44,7 @@ function Login(){
 
     if (bancoDeDados[email] && bancoDeDados[email].senha === senha) {
         alert("Login bem-sucedido!"); // Exibe mensagem se o login for bem-sucedido
-        window.location.href = "tela_inicio.html"; 
+        window.location.href = "/inicio-telas/tela_inicio.html";
         } else {
         alert("Endereço de email ou senha incorretos."); // Exibe mensagem se o login falhar
     }
@@ -66,7 +66,7 @@ function Recp_senha(){
     else{
         //falta o codigo p enviar o email aqui !!!
         alert('Email de confirmação foi enviado com sucesso!')
-        window.location.href="tela_login.html" 
+        window.location.href="/inicio-telas/tela_inicio.html" 
     }
 }
 
@@ -92,7 +92,7 @@ function FecharTermos(){
 
     let voltarInicio = document.getElementById('voltar')
     function Voltarinicio() {
-        window.location.href = "tela_inicio.html";
+        window.location.href = "/inicio-telas/tela_inicio.html";
     }
 
 
