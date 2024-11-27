@@ -115,10 +115,21 @@ const jsConfetti = new JSConfetti
 
 
 btnConfetti.addEventListener('click', () => {
-    jsConfetti.addConfetti()
     jsConfetti.addConfetti({
-        emojis: ['🦥', '✨', '📚', '☕️', '🎭', '🖋', '🎊', '🦥'],
+            confettiRadius: 10,
+            confettiColors: [
+                '#ff0a54', '#ff477e', '#70e5ff', '#ff85a1', '#fbb1bd', '#a070ff',
+              ],
+    }
+    )
+    jsConfetti.addConfetti({
+        emojis: [ '✨', '📚', '☕️', '🎭', '🎊'],
+        confettiNumber: 100,
      })
+     jsConfetti.addConfetti({
+        emojis: ['🦥'],
+        confettiNumber: 50,
+     })
+     
 } )
 
-// só armazena em uma tag html e mostra pelo inne html, igual na listaPagamento

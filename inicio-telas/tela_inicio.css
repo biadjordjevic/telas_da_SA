@@ -30,7 +30,6 @@ html{
 a {
     text-decoration: none;
     display: flex;
-    padding: 4px;
     color: #E6C17D;
     font-size:23px;
 }

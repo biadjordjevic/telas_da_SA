@@ -158,8 +158,29 @@ function exibirDestaques(){
 
 
 
+function nomeUsuario(){
+
+let mudarUser = JSON.parse(localStorage.getItem("userLogado")) 
+nome = document.getElementById('nome-user-mostrar')
+link = document.getElementById('link_perfil')
+
+if(!mudarUser){
+    nome.textContent = 'Cadastro/login'
+    link.href = '/cadastro-login/tela_cadastro.html';
+}
+else{
+    const nomeUsuario = mudarUser.user;
+    const nomeFormatado = nomeUsuario.charAt(0).toUpperCase() + nomeUsuario.slice(1).toLowerCase();
+    nome.textContent = nomeFormatado; 
+    link.href = '/cadastro-login/tela_login.html';
+}
+
+}
+
+
 window.onload = () => {
     exibirDestaques();
+    nomeUsuario();
     exibirProdutos();   
 };
 
