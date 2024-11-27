@@ -8,12 +8,15 @@ function Cadastro(){
     let email = document.getElementById("email_cad").value;
     let senha = document.getElementById("senha_cad").value;
     let senha_confirm = document.getElementById("senha_confirm_cad").value;
-    
-    
+    let aceitarTermos = document.getElementById('concordo').checked;
 
-    if(!user || !email|| !senha|| !senha_confirm){
+    if(!user || !email|| !senha|| !senha_confirm ){
         alert('Preencha todos os campos. ')
-    }else if(senha == senha_confirm){
+    }
+    else if(!aceitarTermos){
+        alert('Você precisa aceitar os termos. ')
+    }
+    else if(senha == senha_confirm){
         let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados")) || {};
          
     
@@ -22,7 +25,11 @@ function Cadastro(){
             return;
         }
 
-        bancoDeDados[email] = { email: email, user: user, senha: senha };
+        bancoDeDados[email] = { 
+            email: email,
+            user: user, 
+            senha: senha 
+            };
         localStorage.setItem("bancoDeDados", JSON.stringify(bancoDeDados));
 
         alert('Usuário cadastrado com sucesso!')
@@ -43,8 +50,11 @@ function Login(){
     let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"))
 
     if (bancoDeDados[email] && bancoDeDados[email].senha === senha) {
+
+        localStorage.setItem("userLogado", JSON.stringify(bancoDeDados[email]));
         alert("Login bem-sucedido!"); // Exibe mensagem se o login for bem-sucedido
         window.location.href = "/inicio-telas/tela_inicio.html";
+
         } else {
         alert("Endereço de email ou senha incorretos."); // Exibe mensagem se o login falhar
     }

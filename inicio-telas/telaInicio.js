@@ -106,8 +106,9 @@ function adicionarNoCarrinho(produto){
 
 function exibirDestaques(){
     const listaDestaques = document.getElementById('listaDestaques');
+    
     if (!listaDestaques) {
-        console.error("Elemento 'listaProdutos' não encontrado.");
+        console.error("Elemento 'listaDestaques' não encontrado.");
         return;
     }
 
@@ -161,5 +162,10 @@ window.onload = () => {
     exibirDestaques();
     exibirProdutos();   
 };
+
+
+
+
+
 
 
