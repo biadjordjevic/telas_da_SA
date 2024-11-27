@@ -214,11 +214,6 @@ function deletarProduto(index){
     exibirProdutos()
 }
 
-function limparProdutos() {
-    localStorage.removeItem('produtos');
-    exibirProdutos();
-}
-
 
 function destacarProduto(index){
     let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
