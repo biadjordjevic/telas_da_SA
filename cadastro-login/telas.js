@@ -230,7 +230,7 @@ function destacarProduto(index){
     produtos[index].destaque = true;
     localStorage.setItem('produtos', JSON.stringify(produtos));
     exibirProdutos()
-    console.log('Produto ${produtos[index].nome} agora é destaque:,' + produtos[index].destaque);
+    console.log('Produto ${produtos[index].nome} agora é destaque:,' + produtos[index].destaque); 
 }
 
 
